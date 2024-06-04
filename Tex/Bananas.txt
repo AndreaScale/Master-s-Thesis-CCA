@@ -1,0 +1,411 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[a4paper, margin=0.6in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\selectlanguage{english}
+\usepackage{amsmath,amsthm,amssymb,fge,mathrsfs}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{makeidx} %per fare l'indice
+\usepackage{faktor} %per i quozienti
+
+%tikz (pacchetto per i disegni)
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{calc} %per poter fare i calcoli
+\usetikzlibrary{arrows.meta} %per usare veri tipi di frecce
+\usetikzlibrary{calc,patterns,angles,quotes} %per disegnare gli angoli
+\usetikzlibrary{decorations} %per i grafici orientati (con sopra le frecce)
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{backgrounds} %per il colore sullo sfondo delle immagini
+\usetikzlibrary{shapes.geometric} %per i triangoli negli alberi
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{fillbetween} %per colorare le aree comprese tra due grafici
+
+\usepackage{caption} %per la caption sotto alle immagini
+\usepackage[tracking=true]{microtype} %per avvicinare il testo
+\usepackage{enumitem} %per modificare agilmente gli elenchi
+\usepackage{esvect} %per le freccette di vettore sui caratteri
+\usepackage{stmaryrd} %fulmine per il simbolo dell'assurdo
+\usepackage{relsize} %per fare i simboli più grandi
+\usepackage{mathabx} %per il simbolo di dotminus
+\usepackage{esint} %per l'integrale tagliato (fint)
+
+\usepackage[customcolors]{hf-tikz} %per evidenziare pezzi di matrice
+
+\usepackage{verbatim} %per commentare un blocco
+
+\usepackage{multirow} %per la tabella
+\usepackage{array} %per lo spazio nella tabella
+
+%Libreria per gli alberi
+\usepackage[linguistics]{forest}
+
+%Librerie aggiunte
+\usepackage{multicol} %per gli elenchi puntati su più colonne/righe
+\usepackage{multirow}
+
+%pacchetto per il prodotto interno
+\usepackage{physics}
+
+%Libreria per i subfiles
+
+\usepackage{subfiles} %meglio caricarla per ultima
+
+\usepackage{biblatex}
+\addbibresource{biblio.bib}
+%usiamo paragraph come nuova sottosottosottosezione 
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+
+\newtheorem{theorem}{Theorem}
+\numberwithin{theorem}{section}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{lemma*}{Lemma}
+
+\newtheorem{definition}{Definition}
+\numberwithin{definition}{section}
+
+\newtheorem*{remark}{Remark}
+
+\newtheorem{example}{Example}
+\numberwithin{example}{section}
+
+\newtheorem{exercise}{Exercise}
+\numberwithin{exercise}{section}
+
+\renewcommand{\proofname}{\proof}
+
+\renewcommand{\thefootnote}{[\arabic{footnote}]}% Modify footnote globally
+
+%%%simboli speciali
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\CO}{\mathcal{C}}
+
+\DeclareMathOperator{\Dom}{Dom}
+\DeclareMathOperator{\Ima}{Im}
+
+\DeclareMathOperator{\mcd}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\spanlin}{span}
+
+%\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+%\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
+%Necessario per far si che la dimensione del valore assoluto e della norma si adatti all'aromento passato
+%\makeatletter
+%\let\oldabs\abs
+%\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+%\let\oldnorm\norm
+%\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+%\makeatother
+
+%rinomino il comando per il prodotto interno
+\let\pint\braket
+%comando per il prodotto scalare
+\newcommand{\pscal}[2]{\left\langle #1, #2 \right\rangle}
+
+%Spaziatura per i quantificatori
+\let\oldforall\forall
+\renewcommand{\forall}{\; \oldforall \;}
+\let\oldexists\exists
+\renewcommand{\exists}{\; \oldexists \;}
+
+%freccia per la convergenza debole
+\newcommand{\longrightharpoonup}{\xrightharpoonup{\phantom{AB}}}
+
+\newcommand{\warrow}{\xrightharpoonup{\:\, w \:\, }}
+\newcommand{\sarrow}{\overset{s}{\longrightarrow}}
+\newcommand{\wastarrow}{\xrightharpoonup{ w^* }}
+
+\setlength{\parindent}{0in} 
+\title{Bananas in a Civilized Jungle}
+\author{Andrea Scalenghe}
+\date{September 2023}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+
+\newpage
+
+\section{Introduction}
+
+The aim of this dissertation is to present the concept of civilized jungle and show some results and then to extend the setting in which it is presented by making the goods divisible (?) and later on by introducing production. Our ultimate goal is to prove an analogous of the second welfare theorem for a civilized jungle with divisible (?) goods and production. 
+
+It is important to point out the limitation of a representative firm \cite{Growth_theory-Acemoglu}(Theorem 5.4).
+
+\vspace{5mm}
+\hrule
+\vspace{5mm}
+
+\newpage
+
+\section{Civilized Jungle with indivisible commodities}
+
+Rubinstein and Yildiz \cite{RY} present a civilized jungle as a tuple $\langle N,X,(\succeq^i)_{i\in N}, \trianglerighteq, \mathcal{L}\rangle$ where $N$ are the agents, $X$ are the $n$ object, $(\succeq^i)_{i\in N}$ are the preferences of each agents over the objects, $\trianglerighteq$ is a strict and complete ordering over $N$ which represents the power relation between the agents and $\mathcal{L}=\{\geq_{\lambda}\}_{\lambda\in\Lambda}$ is a set of complete and transitive (possibly not antisymmetric) binary relations which stands for different criteria that rank agents. 
+
+A distribution of the resources over the agents is represented by an assignment $\textbf{x}$ that is a map which maps every agent to an object. How do we define an equilibrium? Given an assignment every agent has to be the strongest among those who envy her and can justify themself. How can someone justify herself among a group of agents? We say that agent $i\in N$ is justified by $\geq_{\lambda}$ over $I\subseteq N$ if $i\geq_{\lambda} j\,\forall j\in N$, then:
+\begin{center}
+$i$ is justified among $I$ if $\exists\lambda\in\Lambda$ such that she is justified by that criteria over $I$.
+\end{center}
+
+That is, if you are the best in a group for at least one criteria then you are justified in that group. The justification proposed by R-Y is exclusively meritocratic, and therefore far from reality. Nevertheless that is the concept of a \textit{civilized} jungle. \color{green}{We could imagine a corrupted jungle in which the justification is influenced by some other forces.} \color{black}{} 
+
+Let $J_{\mathcal{L}}(I)$ be the set of justifiable agents in $I$. Formally, $J_{\mathcal{L}}:\mathcal{P}\rightarrow\mathcal{P}$ such that:
+
+\[J_{\mathcal{L}}(I)=\left\{i\in N\,|\, \exists\lambda\in\Lambda\text{ s.t. }i\geq^{\lambda}j\,\forall j\in I\right\}\]
+
+The last core concept is \textit{envy}. Trivially, an agent $i$ envies $j$ if $x^j\succeq^ix^i$. Let $E(\textbf{x},i)$ be the set of agents that envies $i$, given the assignment $\textbf{x}$. 
+
+We are now able to define the equilibrium concept in a civilized jungle.
+
+\begin{definition}
+    An assignment $\textbf{x}$ is a \textbf{civilized equilibrium} if $\forall i\in N$:
+    \[i\triangleright j \quad \forall j\in J_{\mathcal{L}}(E(\textbf{x},i)) \]
+\end{definition}
+
+A civilized equilibrium is also called a C equilibrium.
+
+
+\color{blue}{A language actually brings civilization to a jungle if it has more then one criteria.}\color{black}{} In fact as R-Y\cite{RY} show that if $\mathcal{L}$ consists of just one strict ordering $\geq$, then the unique "civilized" equilibrium is a serial dictatorship according to $\geq$. Then the C equilibrium does not depend from the power relation over the agents\color{blue}{ and the civilized jungle is just a normal jungle with another power relation.}  \color{black} 
+
+\begin{proposition}
+    if $\mathcal{L}$ consists of just one strict ordering $\geq$, then the unique civilized equilibrium is a serial dictatorship according to $\geq$.
+    \begin{proof}
+        
+    \end{proof}
+\end{proposition}
+
+\vspace{5mm}
+
+SOME EXAMPLES ARE PRESENTED IN THE PAPER. DO WE WANT TO CITE SOME OF THEM?
+
+\vspace{5mm}
+
+In a previous paper Piccione and Rubinstein \cite{P-R} defined the concept of jungle, as a civilized jungle without a language and a related equilibrium.
+
+\begin{definition}
+    An assignment is a \textbf{jungle equilibrium} if: \[\forall i \in N \, \forall j \in E(\textbf{x},i) \text{ then } i\triangleright j\]
+\end{definition}
+
+Therefore, in this simple situation where the goods are indivisible, the unique jungle equilibrium is obtained through a serial dictatorship governed by the power relation. 
+
+\begin{proposition}
+    The unique jungle equilibrium of $\langle N,X,(\succeq^i)_{i\in N}, \trianglerighteq\rangle$ is the assignment obtained through the serial dictatorship ruled by $\trianglerighteq$.
+
+    \begin{proof}
+        \dots
+    \end{proof}
+\end{proposition}
+
+
+Which relation do C equilibrium and jungle equilibrium have? Let us state a property of the power relation in order to answer this question. 
+
+\begin{definition}
+    A strict ordering $\trianglerighteq$ is \textbf{weakly} $\mathcal{L}$\textbf{-concave} if $\forall i,j\in N$:
+    \[\forall\lambda\in\Lambda \,\exists i_{\lambda}\in N\setminus\{j\} \text{ s.t. } i_{\lambda}\geq_{\lambda}j \text{ and } i\triangleright i_{\lambda} \Rightarrow i\triangleright j\]
+\end{definition}
+
+Weak convexity is an extension of the basic notion of convexity. It was proposed by Richter and Rubistein \cite{Convex_Pref} and it allows the defition of the property for any space without the need of an algebraic structure. It is quite intuitive if seen as: if \textit{for all} the criteria that we are using in our language I ($i$) can find some one ($i_{\lambda}$) weaker than me and best suited than you ($j$) then I am stronger than you. Under this condition the jungle equilibrium is a C equilibrium.
+
+% Before proving this statement let us recall some properties of $\mathcal{L}$-concavity.\footnote{Maybe we can prove it through $\mathcal{L}$-conv iff conv under continuity}
+
+% \begin{proposition}
+%     $J_{\mathcal{L}}(I)\subseteq I$
+% \end{proposition}
+
+\begin{proposition}
+    Let $\langle N,X,(\succeq^i)_{i\in N}, \trianglerighteq, \mathcal{L}\rangle$ be a civilized jungle with a weakly $\mathcal{L}$-concave power relation, then the jungle equilibrium is a civilized equilibrium.
+
+    \begin{proof}
+        Let $\textbf{x}$ be the jungle equlibrium. Of course in a serial dictatorship $E(\textbf{x},i)\subseteq\{j\,|\,i\triangleright j\}$, then $i$ is the strongest among $J_{\mathcal{L}}(E(\textbf{x},i))$ if $i$ belongs to it\footnote{\color{red}{$J_{\mathcal{L}}(I)\subseteq I$???}}. If by contradiction $i$ is not the strongest in $J_{\mathcal{L}}(E(\textbf{x},i))$ then $i\notin J_{\mathcal{L}}(E(\textbf{x},i))$, but then $\forall\lambda\in\Lambda$ there exists $i_{\lambda}\neq i$ such that $i_{\lambda}\geq_{\lambda}i$ but also $i\triangleright i_{\lambda}$, and so by weak concavity $i\triangleright i$.   
+    \end{proof}
+\end{proposition}
+
+\color{green}{This is what R-Y\cite{RY} write. Actually, I think that the concavity of the power relation is not necessary. We gave the definition of the justified of a group as a subset of that group, it seem natural in this setting, why does someone who is not interested in the good justify himself. Therefore given our definition we have:
+
+\[J_{\mathcal{L}}(E(\textbf{x},i)\subseteq E(\textbf{x},i)\,\forall i\in N\]
+
+Then if some}\color{black}
+
+Furthermore if the notion of concavity is empowered the jungle equilibrium becomes the only C equilibrium.
+
+\begin{definition}
+    A power relation is \textbf{strongly $\mathcal{L}$-concave} if $\forall i,j\in N$:
+    \[\forall\lambda\in\Lambda\,\exists i_{\lambda}\in N\setminus\{j\}\text{ s.t. }i_{\lambda}\geq_{\lambda}j\text{ and }i\trianglerighteq i_{\lambda}\Rightarrow i\triangleright j\]
+\end{definition}
+
+\begin{proposition}
+    Let $\langle N,X,(\succeq^i)_{i\in N}, \trianglerighteq, \mathcal{L}\rangle$ be a civilized jungle of strict orderings criteria with a strongly $\mathcal{L}$-concave power relation, then the jungle equilibrium is the unique civilized equilibrium.
+
+    \begin{proof}
+        Let $\textbf{y}$ be another C equilibrium. Then not being the serial dictatorship implies the existence of $i,j\in N$ such that $i\triangleright j$ and $x^j\succeq^ix^i$. Because $\textbf{y}$ is a C equilibrium $i\notin J_{\mathcal{L}}(E(\textbf{x},j))$, then $\forall\lambda\in\Lambda\,\exists i_{\lambda}\in N\setminus\{i\}$ such that $i_{\lambda}\geq_{\lambda}i$. Since $\textbf{y}$ is a C equilibrium $j\trianglerighteq j_{\lambda}\,\forall\lambda$. Then by strong concavity $j\triangleright i$.  
+    \end{proof}
+\end{proposition}
+
+\newpage
+
+\section{Welfare theorems}
+
+Considered this simple economic model we want to establish whether or not the welfare theorems hold. Let us recall them heuristically: the first one states that under pretty weak hypotheses any competitive equilibrium is Pareto optimal while the second one states that under more stringent assumptions any Pareto optimal allocation can be attained as a competitive equilibrium through a suitable price vector (and share allocation). Let's talk math. We will present the welfare theorems in (almost) their most general formulation, following D. Acemoglu \cite{Growth_theory-Acemoglu}. At first we need to define the building block of this theory, i.e. a stylized economy. We set $N\in\mathbb{N}^*=\mathbb{N}\cup\{+\infty\}$ as the number of agents, $K\in\mathbb{N}^*$ as the number of (divisible) commodities and $\mathcal{F}$ as the set of firms. Commodities can be taken in a continuum, but this setting is sufficient for our purposes. Each agent $i\leq N$ has a \textit{preference relation} $\succeq^i$ on the set of bundles $\mathbb{R}_+^K$ and a \textit{consumption set} $X^i\subseteq\mathbb{R}_+^K$. We assume the preference relation to be strongly monotone and continuous (WHY??) and the consumption set to be compact, convex and that it satisfies free disposal (???). We won't allow consumption to negative, the extension is straightforward. We define $\textbf{X}=\prod_{i=1}^NX^i$ the aggregate consumption set as the cartesian product of all the consumption sets. We then denote $Y^f\subseteq\mathbb{R}^K$ (???) for each $f\in\mathcal{F}$ as the production set of firm $f$. We assume each production set to be a cone and denote $\textbf{Y}=\prod_{f\in\mathcal{F}}Y^f$. At last we define the \textit{profit share} deriving from the aggregate production as $\theta=(\theta^f)_{f\in\mathcal{F}}$ where $\theta^f\in\mathbb{R}_+^N$ represents the redistribution of firm $f$'s production to each agent. We normalize to $1$ for each firm, that is $\sum_{i=1}^N\theta_f^i=1\,\forall f\in\mathcal{F}$.
+
+\begin{definition}
+    The tuple $\langle N, \mathcal{F}, \textbf{X}, \textbf{Y}, {\omega}, \theta\rangle$
+\end{definition}
+
+
+\newpage
+
+\section{Civilized Jungle with divisible commodities}
+
+I now extend the setting of a civilized jungle and the relative equilibrium concept for divisible commodities. What do I have to do, how do we do it???. I rely on the civilized jungle by R-Y and define for each agent $i\in N$ a consumption set $X^i\subseteq\mathbb{R}_+^K$. I also have to specify an aggregate bundle $w=(w_1,\dots,w_K)$, where $w_k\in\mathbb{R}_+\,\forall k$. Therefore a \textbf{civilized jungle} is a tuple:
+
+\[\langle N,K,(X^i)_{i\in N}, w, (\succeq^i)_{i\in N}, \trianglerighteq, \mathcal{L}\rangle\]
+
+Because agents can consume more then just one commodity in different quantities, economic scenarios cannot be represented by an assignment, instead they are model them through allocations. An allocation is a vector $\textbf{z}\in \mathbb{R}_+^K\times X$, where the first coordinate stands for the unused goods, therefore $\sum_{i=0}^Nz_i=w$. I now adapt the civilized equilibrium concept by redefining the notion of "envy". In this context agent are not actually envious, because their economic situation can be, and realistically is always, composed by multiple commodities. Given an allocation an agent can "dream" about another agent if she sees in the dreamed one's property a more preferred allocation. To keep it simpler, I do not allow coercion on multiple agents per time. Then we define formally the concept of dreamer,
+
+\begin{definition}
+    Given an allocation $\textbf{z}$ and $i,j\in N$ we say that $i$ \textbf{dreams} about $j$ if:
+
+\[\exists y^i\in X^i \text{ such that } y^i\succeq^iz^i \text{ and } y^i\leq z^i+z^j\]
+
+\end{definition}
+
+We define the new set of those who dream someone in a given allocation:
+
+\[ D(\textbf{z},i) = \left\{ j\in N\,|\,\exists y^i\in X^i \text{ s.t. } y^i\succeq^iz^i,\, y^i\leq z^i+z^j\right\}\]
+
+
+In a jungle equilibrium every agent has to be the strongest among all those who dream him. In a civilized jungle agents have to justify themself through at least one criteria in order to "fight" for commodities. Once agents are justified, jungle law prevails.
+
+\begin{definition}
+    An allocation $\textbf{z}$ is a \textbf{civilized equilibrium} if:
+    \begin{itemize}
+        \item $\forall i\in N\,:i\triangleright j\,\forall j\in J_{\mathcal{L}}(D(\textbf{z},i))$
+        \item $J_{\mathcal{L}}(D(\textbf{z},0))=\emptyset$
+    \end{itemize}
+\end{definition}
+
+The first condition was previously explained, while the second one assures that the unused goods aren't useful for anyone. It can be restated as:
+
+\[\forall i\in N\,:\, \exists y^i\in X^i \text{ s.t. } y^i\succeq^iz^i,\, y^i\leq z^i+z^0 \,\Rightarrow\,\forall\lambda\in\Lambda\exists j_{\lambda}\in D(z,0) \text{ s.t. } j_{\lambda}\triangleright i\]
+
+I point out this less concise definition in order to highlight that agents can dream about exploiting unused goods in equilibrium, but they are not justified in doing so.
+
+Does the relation between jungle and civilized equilibrium still hold? Let us briefly recall the jungle equilibrium concept.
+
+\begin{definition}\label{def1}
+    An allocation $\textbf{z}$ is a \textbf{jungle equilibrium} if $\nexists i,j\in N$ s.t. $i\triangleright j$ and $\nexists y^i\in X^i$ s.t. $y^i\succeq^iz^i$ and:
+    \[y^i\leq z^i+z^i\text{ or }y^i\leq z^i+z^0\]
+\end{definition}
+
+We can reformulate definition \ref{def1} as follows, in terms of dreamers.
+
+\begin{definition}
+    An allocation $\textbf{z}$ is a \textbf{jungle equilibrium} if:
+    \begin{itemize}
+        \item $\forall i\in N\,:i\triangleright j\,\forall j\in D(\textbf{z},i)$
+        \item $D(\textbf{z},0)=\emptyset$
+    \end{itemize}
+    
+\end{definition}
+
+Through this \textit{equivalent} (PROVE) definition it is clear the further step required by civilization, in equilibrium agents have to be the strongest among the justified dreamers, not among those who just dream. We recall that the justified among a group are defined to be part of those group. The definition could be also given without this condition, letting agents to be justified in groups of which they are not part, but it seems unreasonable in our setting, given that only dreamers are interested in being justified.
+
+\begin{proposition}
+In a weakly concave jungle, a jungle equilibrium is civilized.
+
+    \begin{proof}
+        The second condition is fulfilled. $J_{\mathcal{L}}(D(\textbf{z},\cdot))\subseteq D(\textbf{z},\cdot)$, therefore being the strongest in the latter implies being stronger in the justified envious, if part of it. Then by contradiction as before we prove the belonging.
+    \end{proof}
+\end{proposition}
+
+Of course the uniqueness under strict concavity does not hold. The proof by R-Y\cite{RY} breaks instantly when the existence of another C equilibrium implies that there is at least one powerful envious, meaning that she is stronger that the envied one. It is not true when goods are divisible, possibly there are multiple best bundles for each agent. Clearly under smoothness and strict concavity the uniqueness is attained. 
+
+\newpage
+
+\section{Civilized Welfare Theorems}
+
+I now investigate whether or not the welfare theorems hold in a Civilized Jungle. As first step we have to adapt the statement of the theorems to this setting. Evidently a competitive allocation is the civilized equilibrium while the concept of \textit{Pareto efficiency} is intended as follows.
+
+\begin{definition}
+    An allocation $\textbf{z}$ is \textbf{Pareto efficient} if does not exist another $\textbf{y}$ allocation s.t:
+    \[y^i\succeq^iz^i\,\forall i\in N \text{ and } \exists j\in N \,: \,y^j\succ^jz^j \]
+\end{definition}
+
+That is, an allocation is Pareto efficient if no one can improve her situation without making anyone else worse off. 
+
+In further sections production will be introduced in the jungle setting, until then the welfare theorems are stated in their simplified versions.
+
+\subsection{First civilized theorem}
+
+The first theorem can be interpreted as:
+
+\begin{center}
+    A civilized equilibrium is Pareto efficient.
+\end{center}
+
+We know from P-R that unique jungle equilibria are indeed Pareto efficient, from now on just efficient. We provide a counter-example for a civilized equilibrium, different from the one proposed by R-Y.
+
+\begin{example}
+    \dots
+\end{example}
+
+\subsection{Second civilized theorem}
+
+The second welfare theorem, in its standard formulation, guarantees for every Pareto efficient allocation, under suitable assumption, the existence of a price vector and an endowment which sustain that allocation as a competitive one. In a jungle, even if civilized, the only currency is brute force, then prices and personal endowments are substituted by a power relation. Therefore we can restate the theorem as:
+
+\begin{center}
+    For every Pareto efficient allocation there exists a jungle equilibrium there exist a power relation which sustains the allocation as a civilized equilibrium. 
+\end{center}
+
+NOW INDIVISIBLE COMMODITIES
+
+A first necessary condition for an assignment to be a civilized equilibrium is being justified.
+
+\begin{definition}
+    An assignment $\textbf{x}$ is \textbf{justified} if $\forall i\in N$ the agent $i$ is justifiable in $E(\textbf{x},i)$
+\end{definition}
+
+\dots
+
+\newpage
+
+\newpage
+
+\section{Working monkeys}
+
+I now implement \textit{production} in a civilized jungle with divisible commodities, from now on just a civilized jungle.
+
+P-R propose that the endowment $\omega$ to be replaced by a set $Y$ which is a collection of endowments. $Y$ stand for the production component of the jungle meaning that shapes the agents' behavior by defining goods' quantity. In this representation of the production side of the jungle the endowments are defined a priori, as the power relation. My goal is to describe an endogenous production in a civilized jungle.   
+
+\newpage
+
+\printbibliography[]
+
+\end{document}

@@ -1,0 +1,164 @@
+\section{Civilized Welfare Theorems}
+
+I now investigate whether or not the welfare theorems hold in a Civilized Jungle. As a first step, we have to adapt the statement of the theorems to this setting. Evidently, a competitive allocation is a civilized equilibrium while the concept of \textit{Pareto efficiency} is intended as follows.
+
+\begin{definition}
+    An allocation $\textbf{z}$ is \textbf{Pareto efficient} if does not exist another $\textbf{y}$ allocation s.t:
+    \[y^i\succeq^iz^i\,\forall i\in N \text{ and } \exists j\in N \,: \,y^j\succ^jz^j \]
+\end{definition}
+
+That is, an allocation is Pareto efficient if no one can improve her situation without making anyone else worse off. 
+
+In further sections, production will be introduced in the jungle setting, until then the welfare theorems are stated in their simplified versions.
+
+\subsection{First civilized theorem}
+
+The first theorem can be interpreted as:
+
+\begin{center}
+    A civilized equilibrium is Pareto efficient.
+\end{center}
+
+We know from \cite*[PR]{P-R} that unique jungle equilibria are indeed Pareto efficient, from now on just efficient. Rubenstein and Yildiz \cite[RY]{RY} show that a strong result holds for civilized jungles.
+
+\begin{proposition}\label{Prop: no PE}
+    Given a civilized jungle with a language of strict orderings such that there exists no agent $i,j$ where one is ranked right above the other and the opposite relation holds for the language. If the power relation is not weakly concave then there exists a preference profile such that there exists no pareto efficient C equilibrium. 
+\end{proposition}
+
+The proof is rather long and not of much interest for our purposes. As the authors point out, Proposition \ref{Prop: no PE} together with Proposition \ref{Prop: undivisible, weakly concave L} implies that if a civilized jungle has a language of strict orderings then weak $\mathcal{L}-$concavity of the power relation is almost a necessary and sufficient condition for the existence of a Pareto efficient civilized equilibrium for every preference profile.  
+Since we already lose the first welfare theorem power for indivisible commodities we shift our attention to the second one, which has a civilized version in \cite[PR]{P-R}.
+
+\subsection{Second civilized theorem}
+
+The second welfare theorem, in its standard formulation, guarantees for every Pareto efficient allocation, under suitable assumption, the existence of a price vector and an endowment that sustains that allocation as a competitive one. In a jungle, even if civilized, the only currency is brute force, then prices and personal endowments are substituted by a power relation. Therefore we can restate the theorem as:
+
+\begin{center}
+    For every Pareto efficient allocation there exists a power relation which sustains the allocation as a civilized equilibrium. 
+\end{center}
+
+If dealing with non-divisible goods, \cite[RY]{RY} have proved an analogous version of the second welfare theorem. The two key hypotheses are strict orderings as languages and restraining efficient allocation to \textit{J-costrained} efficient allocation. The first one guarantees a clear power relation. The latter is an important and necessary constraint: in a civilized equilibrium each agent has to justify herself among those who envy her, otherwise she cannot use her force against them. This assumption is not necessary for an efficient assignment. It is therefore necessary to introduce the following class of assignments.
+
+\begin{definition}
+    An allocation $\textbf{z}$ is J-constrained if $i\in J_{\mathcal{L}}(E(\textbf{z},i))\,\forall i \in N$.
+\end{definition}
+
+Once we constrain an efficient assignment to a language we can inquire under which conditions on $\mathcal{L}$ each efficient assignment is an equilibrium. Turns out that for divisible commodities the adapted proof of Proposition \ref{Prop: jungle eq is C in weakly concave} from \cite[RY]{RY} breaks immediately. The idea is to build the power relation as a completion of a non-cyclic binary relation over a subset of $N$. In particular, the subset over which the (possibly incomplete) binary relation is defined is such that it guarantees the assignment to be C equilibrium. I now present the theorem from \cite[RY]{RY} and then show why it does not hold in our more general setting.
+
+% This idea does not hold for divisible commodities because we are not able to construct 
+
+% This binary relation mimics the necessary power relations between agents to make the efficient allocation an equilibrium. 
+
+\begin{theorem}
+    Let $\langle N,(X^i)_{i\in N}, (\succeq^i)_{i\in N}, \mathcal{L}\rangle$ be a tuple as above. Then, for every J-constrained efficient assignment \textbf{x} there exists a power relation $\trianglerighteq$ such that \textbf{x} is a C equilibrium for the corresponding civilized jungle. 
+
+    \begin{proof}
+        Let \textbf{x} be a J-constrained efficient assignment. Let $P$ be a binary relation over $N$ such that for each $i,j\in N$ then $jPi$ if $i$ envies $j$ and she is justifiable in $E(\textbf{x},j)$. If we show $P$ to be non-cyclic, then it is a pre-order over $N$. This comes from a standard result in order theory\footnote{Varian (1974) for non cyclic implies completable}, I will talk more about it later in this section. By completing $P$, we'd get a power relation $\trianglerighteq$, which sustains $\textbf{x}$ as a C equilibrium. Indeed:
+        \begin{itemize}
+            \item $i\in J_{\mathcal{L}}(E(\textbf{z},i))$ for all $i\in N$ because $\textbf{x}$ i J-constrained
+            \item If $i$ is justifiable in $E(\textbf{z},j)$, then $jPi$, then $j\triangleright i$
+            % \item Clearly $D(\textbf{z},0)=\emptyset$, because $\textbf{z}$ is efficient.
+        \end{itemize}
+
+        Let us show that $P$ is non-cyclic. Suppose by contradiction that for some $I=\{1,2,\dots,m\}$ we have $1P2P\dots PmP1$. Let us define the allocation \textbf{y} as $y^i=x^{i-1}$ for $i\in I$ and $y^i=x^i$ for $i\notin I$. The assignment \textbf{y} is justifiable and pareto dominates \textbf{x}. The latter is obvious by construction. By recalling that the operator $L_{\mathcal{L}}$ is monotone decreasign\footnote{Meaning that $A\subseteq B\Rightarrow J_{\mathcal{L}}(A)\supseteq J_{\mathcal{L}}(B)$} we prove \textbf{y} to be justified, indeed for $i\in N$ then:
+        \begin{itemize}
+            \item If $i\in I$ then $E(\textbf{y},i)\subseteq E(\textbf{x},i-1)$ 
+            \item If $i\notin I$ then $E(\textbf{y},i)\subseteq E(\textbf{x},i)$
+        \end{itemize}
+
+        But $i$ is justified in both $E(\textbf{x},i)$ and $E(\textbf{x},i-1)$, because \textbf{x} is justified and by definition of $P$.
+    \end{proof}
+\end{theorem}
+
+The whole proof relies on the possibility of constructing an assignment \textbf{y} that pareto dominates \textbf{x}. For divisible commodities, two main problems arise. We first think about non-civilized jungles. We call the first one \textit{reciprocal dreaming} the instance in which two agents dream each other. This situation could clearly occur even in the non-divisible goods setting, but only in non-efficient assignments. Indeed, if two monkeys envy each other they can simply switch their bananas and get a more efficient assignment. When bananas are divisible, reciprocal dreaming does not imply inefficiency. But if in an efficient allocation two agents are reciprocal dreamers, then no power relation will sustain the allocation as an equilibrium. Indeed, every power relation would not be strict as for the reciprocal dreamers $i,j$ the equilibrium condition would imply $i\triangleright j$ and $j\triangleright i$. We found a necessary condition. To formally express it we define reciprocal dreaming.
+
+\begin{definition}\label{Def: reciprocal dreaming}
+    Let $z$ be an allocation. Two agents $i,j\in N$ are \textbf{reciprocal dreamers} if:
+
+    \[i \in D(z,j) \text{ and } j \in D(z,i).\]
+
+    An allocation is \textbf{non-reciprocal} if no reciprocal dreamers exist. 
+\end{definition}
+
+Non-reciprocality is a key concept in C-equilibria since it drastically shapes the power relation of the Jungle. 
+
+
+\begin{proposition}\label{Jungle implies no reciprocality}
+    Let $z$ be a Jungle equilibrium, then $z$ is non-reciprocal.
+
+    \begin{proof}
+        By absurd. Let $i,j\in N$ be reciprocal dreamers. By definition of Jungle equilibrium
+
+        \[j\in D(z,i)\Rightarrow i\triangleright j\]
+
+        and 
+
+        \[i \in D(z,j) \Rightarrow j\triangleright i.\]
+
+        Then $\triangleright$ is not antisymmetric $\lightning$. 
+    \end{proof}
+\end{proposition}
+
+If we impose non-reciprocal dreaming can we prove the theorem? Not yet, the very essence of the more general setting prevents the allocation \textbf{y} from being constructed. While for non-divisible commodities monkeys could just switch different bananas, in this setting what is dreamed by two monkeys could be unfeasible together. We therefore should follow a different path, a straightforward extension of the proof is impossible.
+
+Actually, a general result holds: the II welfare theorem does not hold for uncivilized jungles with divisible commodities. Given an allocation, we can sustain it as a C equilibrium only if in the subset of dreamers there are no reciprocal dreamers (we can impose this condition) and those who dream are weaker than the dreamed one. We can easily construct a Pareto efficient allocation where the two previous conditions are fulfilled, but it is not an equilibrium.
+% , but the binary relation resulting doesn't satisfy OWC, which will be studied later, and therefore cannot be extended to a complete order (because of \ref{Sziplrajn}).
+
+\begin{example}
+    Let three monkeys fight for one banana, one nut, and one stick. Monkey $A$ prefers one banana and the stick over everything, monkey $B$ prefers the banana and the nut over everything else, and monkey $C$ prefers the nut and the stick. The preference relations are:
+
+    \[\begin{cases}
+        (1,0,1)\succ (1,0,0) \text{ strictly better than all others, over which she is indifferent.} \\
+        %\succ^a(0,0)\sim^a(0,1)\sim^a(1,1) \\
+        (1,1,0)\succ (0,1,0)  \text{ strictly better than all others, over which she is indifferent.} \\
+        %\succ^b(0,0)\sim^b(0,1)\sim^b(1,0) \\
+        (0,1,1)\succ (0,0,1)  \text{ strictly better than all others, over which she is indifferent.}
+        %\succ^c(0,0)\sim^c(1,0)\sim^c(1,1)
+    \end{cases}\]
+
+    Consider the allocation $z=((1,0,0),(0,1,0),(0,0,1))$. It is Pareto efficient (the only allocations where someone is strictly better off are obtained if $B$ takes the banana from $B$, or if $C$ takes the nut from $B$ or $A$ takes the stick, in all instances, the robbed are worse off). There is no reciprocal dreaming, $B$ dreams about $A$ and is dreamed by $C$, while $A$ only dreams about $C$. To have a power relation $\triangleright$ sustaining $z$ as a jungle equilibrium it has to be the case that
+
+    \[A\triangleright B\text{ and } B\triangleright C.\]
+
+    But then it must be the case that $A\triangleright C$, which is absurd because $A$ dreams about $C$'s stick.
+\end{example}
+
+In the next chapter, we study how to break these circles that prevent an allocation from being sustained as an equilibrium. This will be done by civilization, which will be part of the legislative power of jungle institutions.
+
+
+% WE CAN TRY TO DEAL WITH OWC BREAKING WITH A LANGUAGE. We can impose a language such that whenever OWC is broken by transitivity the more powerful dreamer (impossible in equilibrium) is excluded from the fight by civilization.
+
+% This approach doeesn't work...
+
+
+% If the language can be implemented by external forces, as a jungle policy, then the II welfare theorem holds.
+
+
+% A stronger, or useless, result holds.
+
+% \begin{proposition}
+%     For every allocation $z$ and every power relation, there exists a language that supports $z$ as a civilized equilibrium
+
+%     \begin{proof}
+%         Put just one order? Think about it, should be straightforward.
+
+%         It is sufficient to construct a language that prevents anyone from acting coercively over dreamed agents.  Does such a language exist? 
+%     \end{proof}
+% \end{proposition}
+
+% We can ask the language to satisfy a property that ensures OWC. We want $\mathcal{L}$ s.t. $\forall \{a,b\}\in \mathcal{R}_z$ then:
+
+% \[\forall\lambda\in\Lambda\,\exists c_{\lambda}\in D(z,a)\,:\,c_{\lambda}>_{\lambda}b\]
+
+% Where:
+
+% \[\mathcal{R}_z=\left\{\{a,b\}\,|\,(a,b),(b,a)\in \hat{\mathcal{P}}_z\right\}\]
+
+% And:
+
+% \[\hat{\mathcal{P}}_z=\left\{(a,b)\,|\, aT(\trianglerighteq)b\right\}\]
+
+% Where $\triangleright$ is defined by:
+
+% \[a\triangleright b\text{ if }b\in D(z,a)\]
+
+% Under this condition, which forces OWC, we can prove the II welfare theorem.

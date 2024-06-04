@@ -1,0 +1,219 @@
+
+\section{Jungle policies}
+
+In this section, we present how jungle institutions can implement civilized equilibria. We think of a jungle institution as a policy maker who can implement power relations and languages. Such an entity will be able, under certain circumstances, to impose an allocation as an equilibrium. The main concept is \textbf{civilized compatibility} (\textit{C-compatibility}) of a language with respect to an allocation. We will prove that every allocation that admits a C-compatible language can, almost, be a C equilibrium under that language.
+
+
+Let us take a little detour on the basics of order theory, which will help us precisely spot where we can ask for sufficient conditions to be matched for a completion to a preorder. This procedure will be the main idea behind the implementation of a language and a power relation to get a C equilibrium.
+
+I will add a formal introduction to orders and some basic definitions.
+
+% We'll make use of the following definition.
+
+% \begin{definition}
+% Let $\succeq$ be a binary relation on a non-empty set $X$, $\succ$ be the asymmetric part of $\succeq$ and $T(\succeq)$. We say that $\succeq$ satisfies \textbf{only weak cycles} (OWC) if:
+% \[xT(\succeq) y\Rightarrow \lnot(y\succ x)\]
+% \end{definition}
+
+% As its name suggests, the OWC condition is a weaker condition than acyclicity. Recall that for any binary relation $R$ its transitive closure is denoted by $T(R)$. The transitive closure of $R$ is the smallest binary relation that contains $R$ (in the sense that $xRy$ implies $xT(R)y$ for all $x,y$) is transitive and any transitive binary relation containing $R$ also contains $T(R)$. 
+
+We'll need the following modification of the classical extensions theorem from Sziplrajn.
+
+\begin{theorem}\label{Sziplrajn}
+    For a nonempty set $N$ and an irreflexive, transitive, and antisymmetric binary relation $\succ$ there exists a complete extension of $\succ$ that preserves the properties.
+\end{theorem}
+
+The details of this result are discussed in the appendix.
+
+% \begin{proposition}\label{Sziplrajn}
+% Let R be a binary relation on a non-empty set X. Then R can be extended to a complete preorder if and only if it satisfies OWC.
+
+% \begin{proof}
+%     I will write it. Via Sziplrajn extension theorem and a good reference I found.\cite{MarkDean}
+% \end{proof}
+% \end{proposition}
+
+
+% We adjust the path we are following. As seen, the II fundamental theorem is substantially false for divisible commodities. Anyhow we can restrict ourselves to smaller allocations that can be sustained as C equilibria. that admit a \textit{C-compatible language}.
+
+
+Having acquired the necessary mathematical tools, we now turn our attention to C equilibria and how they can be sustained by power relations. Let us study when a generic allocation $z$ can be sustained a s C equilibrium. We already noticed in Proposition \ref{Jungle implies no reciprocality} that a Jungle equilibrium implies no reciprocal dreaming in the economy. Since we are now working with civilized equilibria we have to adapt this result. We will use the term equilibrium while referring to C equilibrium from now on. Let us recall that for each pair of agent $i,j\in N$ in a C equilibrium it must hold that if they are reciprocal dreamers then at least one of them is not justified in the set of dreamers of the other. Indeed, to maintain antisymmetry of the power relation if $i\in D(z,j)$ and $j\in D(z,i)$, but $z$ is an equilibrium then
+
+\[j\triangleright k\,\forall k\in J_{\mathcal{L}}(D(z,j)),\]
+
+and 
+
+\[i\triangleright k\,\forall k\in J_{\mathcal{L}}(D(z,i)).\]
+
+If both $i$ and $j$ are justified in $D(z,j)$ and $D(z,i)$ respectively, then
+
+\[j\triangleright i \text{ and } i\triangleright j,\]
+
+which contradicts antisymmetry. It is now clear that whenever reciprocal dreaming occurs in an allocation we entrust the language to break it, to sustain it as an equilibrium. It is crucial to note that, given a generic allocation if we aim to impose it as an equilibrium every power relation $\triangleright$ must satisfy
+
+\begin{equation}\label{Cond C eq}
+    i\triangleright j\,\forall j\in J_{\mathcal{L}}D(z,i)\setminus\{i\}.
+\end{equation}
+
+Therefore, we must address all the instances in which this condition contradicts the very nature of $\triangleright$. The first example in which this problem arises is justified reciprocal dreaming, meaning that the reciprocal dreamers are both justified. We aim to impose a condition on the language which excludes this and all the other possibilities. Let us use from scratch the notion of equilibrium to understand where civilization, the language, can help to sustain an allocation as an equilibrium. Let $z$ be an allocation, in a civilized jungle to be constructed, without either power relation or language. We aim at sustaining $z$ as a C equilibrium. A necessary condition on each couple $(\triangleright,\mathcal{L})$ of power relation and language is \ref{Cond C eq}. We take such a tuple. We now have a binary relation, probably incomplete, on $N$, the set of agents. If we can completely extend it to $N$, showing it to be irreflexive, transitive, and antisymmetric we will have, almost, constructed a civilized power hierarchy, the tuple, that sustains $z$ as an equilibrium. Let us extend the power relation $\triangleright$, preserving the necessary properties. We now make use of Theorem \ref{Sziplrajn}. If we construct an extension of $\triangleright$ to a transitive, irreflexive, antisymmetric relation we can apply this slight modification of Sziplrajn's Theorem and get the desired power relation. For transitivity, we take the transitive closure of $\triangleright$, denoted by $T(\triangleright)$. Is this relation irreflexive and antisymmetric? At this point, civilization itself comes into play; it will prevent $T(\triangleright)$ from not being irreflexive and antisymmetric, allowing us to invoke Sziplrajn's Theorem. Actually, we will see that preventing the lack of antisymmetry will also impose irreflexivity. Let us suppose $T(\triangleright)$ is no antisymmetric and therefore there exists two agent $i,j$ such that 
+
+\[iT(\triangleright)j \text{ and }jT(\triangleright)i.\]
+
+By definition of $\triangleright$ for every agents $k,l\in N$
+
+\[k\triangleright l \Leftrightarrow l\in J_{\mathcal{L}}(D(z,k)),\]
+
+therefore, if $iT(\triangleright)j$ it must be the case that $i$ and $j$ are connected by a chain of justified dreamers from $i$ to $j$, that is there exists $k_{h}\in N$ with $h=1,\dots,H$ where $H<N-1$ such that $j$ dreams about the last $k$, each $k$ dreams about the previous one, and the first $k$ dreams about $i$, all justified. 
+
+% This is not only a sufficient cndition for $iT(\triangleright)j$ to hold but it is necessary. 
+
+\begin{proposition}\label{Prop: cond on transitive closure}
+    Let $z$ and allocation and $\triangleright$ defined as in \ref{Cond C eq}. Then $iT(\triangleright)j$ only if either $i\triangleright j$ or $\exists \{k_h\}_{h=1}^H$ for $k_h \in N$ and $H<N-1$ such that
+
+    \[j\in J_{\mathcal{L}}(D(z,k_H)),\, k_H \in J_{\mathcal{L}}(D(z,k_{H-1})),\,\dots,\, k_1\in J_{\mathcal{L}}(D(z,i)).\]
+
+    \begin{proof}
+        Let us suppose that neither $i\triangleright j$ nor there exists a chain of justified dreamers connecting $i$ and $j$. Then we take $\triangleright'\overset{def}{=}T(\triangleright)\setminus\{i,j\}$. This is an extension of $\triangleright$ since $i\triangleright j$ does not hold and all other relations are preserved from the transitive closure. It is also transitive. If, by absurd, there exists a chain of $k_h$ such that
+
+        \[i\triangleright'k_1, k_1\triangleright'k_2\,\dots,\,k_H\triangleright'j,\]
+
+        then either all relations are already in $\triangleright$, and therefore it contradicts the hypothesis, or there exists a couple of the chain for which the relation only holds in $\triangleright'$. If that is the case we apply this reasoning again. Since there are a finite number of agents we end up back with $i\triangleright'j$, absurd.
+    \end{proof}
+\end{proposition}
+
+We can now break via civilization the lack of antisymmetry; we can ask just for one couple in the dreaming loop created by reciprocal dreamers to be broken by civilization. We call this C-compatibility between and allocation and a language.
+
+\begin{definition}
+    Let $z$ and allocation and $\mathcal{L}$ a language. They are \textbf{C-compatible} if for all couples of reciprocal dreamers $i,j\in N$ one of them is not justified in the set of dreamers of the other. 
+\end{definition}
+
+A more formal, less intuitive, but more handy definition is the following.
+
+\begin{definition}
+    Let $z$ and allocation and $\mathcal{L}$ a language. They are \textbf{C-compatible} if for all couples of reciprocal dreamers $i,j\in N$ then one of the following holds
+
+    \begin{enumerate}
+        \item $\forall \lambda\in \Lambda$ there exists $k_{\lambda}\in N\setminus\{i,j\}$ such that $k_{\lambda}>^{\lambda}j$,
+        \item $\forall \lambda\in \Lambda$ there exists $l_{\lambda}\in N\setminus\{i,j\}$ such that $l_{\lambda}>^{\lambda}i$.
+    \end{enumerate}
+\end{definition}
+
+C-compatibility breaks those chains that prevented the transitive closure from being antisymmetric. Furthermore, it also prevents a lack of irreflexivity. Indeed, in light of Proposition \ref{Prop: cond on transitive closure}, if $iT(\triangleright)i$ it must be the case that either $i\triangleright i$, which is impossible by definition, or there exists a chain of justified dreamers from $i$ into itself. For a C-compatible language, this chain is necessarily broken somewhere. 
+
+We have almost proven a jungle policy theorem, the last ingredient needed is J-constrainment. If we impose it, together with C-compatibility, we can build a power relation that sustains the allocation as an equilibrium. We impose that no unused goods are wanted by anyone since this clearly prevents any jungle policy from sustaining the allocation from being an equilibrium.
+
+
+
+% Formally, what do we mean by C compatibility of a language? Let $z$ be an allocation and let us introduce a collection of pairs of agents:
+
+% \[\mathcal{R}_z=\big\{\{a,b\}\,|\,aT(\trianglerighteq)b\text{ and }bT(\trianglerighteq)a\big\}\]
+
+% Where $\triangleright$ is defined by:
+
+% \begin{equation}\label{Def: triangle_def}
+%     a\triangleright b\text{ if }b\in D(z,a)
+% \end{equation}
+
+% That is, $\mathcal{R}_z$ is the collection of all pairs of agents that are "equally powerful" under the transitive closure of $\triangleright$, where this binary relation is defined to satisfy the C equilibrium condition. If we aim at a C-equilibrium a necessary condition is that the power relation $\triangleright$ satisfies \ref{Def: triangle_def}. This requirement directly comes from the equilibrium definition \ref{Cequilibrium}. Then, If two agents $a,b$ are reciprocal dreamers the relation $\triangleright$ is such that
+
+% \[a \triangleright b \text{ and } b \triangleright a,\]
+
+% which contradicts asymmetry. If no pair agents reciprocally dream themself this issue does not arise and the construction of a power relation to sustain the allocation  as a C-equilibrium.
+
+% \begin{definition}
+%     Let $z$ be an allocation. Two agents $i,j\in N$ are \textbf{reciprocal dreamers} if:
+
+%     \[i \in D(z,j) \text{ and } j \in D(z,i).\]
+
+%     An allocation is \textbf{non-reciprocal} if no reciprocal dreamers exist. 
+% \end{definition}
+
+% Non-reciprocality is a key concept in C-equilibria since it drastically shapes the power relation of the Jungle. 
+% % Furthermore, it is incompatible with $J$-constraining.
+
+% % \begin{proposition}\label{Prop: Reciprocability and compatibility}
+% %     Let $z$ be an allocation, if it is reciprocal then it is not $J$-constrained.
+% % \end{proposition}
+
+% Nevertheless, in many instances, reciprocal dreaming may happen, we, therefore, aim to solve this issue via civilization. The policy value of a language decides who is going to prevail between potentially equally strong agents. To do so, we have to break the equivalent power relation coming out from \ref{Def: triangle_def}.
+
+% \begin{definition}\label{c-comp}
+%     Let $z$ be an allocation. A language $\mathcal{L}$ is \textit{C-compatible} if $\forall \{a,b\}\in \mathcal{R}_z$ then $\forall\lambda\in\Lambda$ either
+
+%     \[\exists c_{\lambda}\in D(z,a):\, c_{\lambda}>_{\lambda}b \text{ or } \exists d_{\lambda}\in D(z,b):\, d_{\lambda}>_{\lambda}a,\]
+% \end{definition}
+
+% Few words need to be spent on C-compatibility. It is a strong hypothesis on the relation between an allocation and a language; we require the language to break the power relation between every equally powerful agent, under the C equilibrium condition. C-compatibility makes one of the reciprocal dreamers not justifiable among those who dream about the other one, this does not mean that it is not justifiable among other sets of individuals. 
+
+% ---Make an example.
+
+% {\color{gray}{}
+% rec+cc $=>$ J-UNconstraining. 
+
+% worse: cc $=>$ uncon
+
+
+% Then: 
+% z C-eq $=>$ triangle satisfies \ref{Def: triangle_def} with $L$ $=>$ $a\triangleright b\Rightarrow b\notin J_{\mathcal{L}}(D(z,a))$ $=>$ either $b\notin D(z,a)$ or $\forall\lambda$ b is not the strongest among $D(z,a)$.  
+% z C-eq $=>$ every agent strongest in $D(z,a)$ for some $\lambda$.
+
+% ADJUST THE NOTION OF C-COMPATIBILITY. Not true but get it. CLEARLY POINT OUT THAT \textit{C-compatibility makes the one of the recdream not justifiable in theset of dreamers of the other one, this does not mean it is not justifiable in other sets. Make example.}}
+
+% A C-compatible language is a sufficient tool to sustain an allocation as a C equilibrium. 
+
+% Another important feature of an allocation is \textit{reciprocality}. 
+
+%  Civilization allows us to handle reciprocality of an allocation by breaking this relation, but it is incompatible with $J$-constraining. 
+
+
+
+
+% {\color{red}{FIX. DO ENTIRE PROOF. DO IT IN A PROPER MANNER. REQUIRE J CONSTRAIN. REQUIRE MARKET CLERANCE.} reciprocal dreaming IMPORTANTNTNTNTNT!!!}
+% Address reciprocal dreaming. If it happens then z is not J constrained. Create Proposition about this. Theorem 5.2 holds if no RD. If it happens make another theorem which studies this instance. It should be something like: for RD language chooses one to be stronger (JUNGLE INSTITUTION CHOOSE ALSO LANGUAGE, SOMETHING LIKE LEGISLATIVE POWER OF POLICY MAKERS) and then for the other require C-compatibility. Finally, create a corollary (or final theorem) which states a general form ( which is just this second theorem...?). 
+
+
+\begin{theorem}
+    Let $\langle N,K,(X^i)_{i\in N}, w, (\succeq^i)_{i\in N} \rangle$ be a tuple as above. Then, for every $(\mathcal{L},z)$ where $z$ is $J$-constrained allocation with no unused-wanted goods, and $\mathcal{L}$ is a C-compatible language there exists a power relation $\trianglerighteq$ such that \textbf{z} is a C equilibrium for the corresponding civilized jungle.
+    \begin{proof}
+        Let us consider the civilized jungle given by the tuple and the C-compatible language. Since $z$ is J-constrained we can define $\triangleright'$ over a subset of $N$ pairs as follows:
+
+        \[i\triangleright' j \text{ iff } j\in J_{\mathcal{L}}(D(z,i)).\]
+
+        Since $\mathcal{L}$ is C compatible, $T(\triangleright')$ is irreflexive and antisymmetric. By Theorem \ref{Sziplrajn} there exists a complete extension of $T(\triangleright')$, which we call $\triangleright$. The allocation $z$ is a C equilibrium in the civilized Jungle defined by $\triangleright$ and $\mathcal{L}$ since conditions 1 and 3 of Definition \ref{Cequilibrium} are imposed by hypothesis. Condition 2 is imposed by the definition of $\triangleright'$.
+        
+        % If we prove $\triangleright$ to satisfy only weak circles we can extend it to a complete preorder. Let us suppose by absurd that:
+        
+        % \[iT(\trianglerighteq)j\text{ and } j\triangleright i\]
+
+        % By definition of the binary relation $i\in J_{\mathcal{L}}(D(z,j))$. Furthermore $jT(\trianglerighteq)i$. Therefore $\{i,j\}\in\mathcal{R}_z$, which implies that $i$ is not justifiable in $D(z,j)$. 
+    \end{proof}
+\end{theorem}
+
+Let us note that the fact that no wanted commodity is unused is, for example, implied by Pareto efficiency.
+
+% In the proof we implicitly use the fact that the binary relation defined is the restriction to the justified dreamers of the one defined in definition \ref{c-comp}. That is why the last implication holds. 
+
+\vspace{3mm}
+
+The interpretation of this theorem is straightforward. We suppose that a jungle institution can distribute power and decide a language. If a jungle institution wants to attain a specific allocation as a civilized equilibrium it has just to check whether the allocation admits a C-compatible language. If so, the C-compatible language and the power relation derived from the C equilibrium definition itself will define the civilized jungle under which the allocation is a civilized equilibrium. 
+
+\vspace{3mm}
+
+As a consequence, it would be interesting to study sufficient conditions on the existence of a C-compatible language for a given allocation. We could also investigate if the existence of a C-compatible language to an allocation implies some necessary conditions on the allocation itself. Those conditions would, ideally, help jungle institutions understand whether a certain allocation is actually supportable as an equilibrium or not.
+
+
+% SHOULD ADD TO DEFINITION OF C EQUILIBRIUM $J_{\mathcal{L}}(D(z,i)\cup\{i\})$
+
+\newpage
+
+% \newpage
+
+% \section{Working monkeys}
+
+% I now implement \textit{production} in a civilized jungle with divisible commodities, from now on just a civilized jungle.
+
+% P-R propose that the endowment $\omega$ be replaced by a set $Y$ which is a collection of endowments. $Y$ stands for the production component of the jungle meaning that it shapes the agents' behavior by defining the goods' quantity. In this representation of the production side of the jungle, the endowments are defined a priori, as the power relation. My goal is to describe an endogenous production in a civilized jungle.   
+
+% \dots
+
+% \newpage

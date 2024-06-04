@@ -1,0 +1,87 @@
+\section*{Appendix}
+\addcontentsline{toc}{section}{Appendix}
+
+Let us recall some basic facts of order theory.
+
+\begin{definition}
+    Let $X\neq\emptyset$, a binary relation $R$ on $X$ is a subset of $X\times X$. We write 
+
+    \begin{equation}
+        xRy \text{ if } \{x,y\}\in R.
+    \end{equation}
+\end{definition}
+
+We define some basic properties of a binary relation.
+
+\begin{definition}
+    Let $R$ be a binary relation on $X$ non-empty. We define
+
+\begin{itemize}
+        \item Reflexivity: $\forall x\in X:\, xRx$.
+        \item Irreflexivity: $\nexists x\in X:\, xRx$.
+        \item Antisymmetry: $xRy,yRx \Rightarrow x=y$.
+        \item Symmetry: $xRy \Rightarrow yRx$.
+        \item Transitivity: $xRy,yRz \Rightarrow xRz$.
+        \item Completness: $\forall x,y\in X \Rightarrow xRy\text{ or }yRx$.
+    \end{itemize}
+\end{definition}
+
+Typically, a preorder is a binary relation that satisfies reflexivity, transitivity, and symmetry, and a set with a preorder is called a poset. A linear order is a complete preorder, and a set with a linear order is called a loset. 
+Most of order theory is developed on these concepts. Instead, we use antisymmetry instead of symmetry, and irreflexivity instead of reflexivity. 
+
+
+Let us now define the transitive closure of a binary relation.
+
+\begin{definition}
+    Let $R$ be a binary relation on $X$ non-empty. The transitive closure of $R$ is the smallest transitive binary relation that contains $R$. It is denoted with $T(R)$.
+\end{definition}
+
+Inclusion of binary relation is intended in the canonical set inclusion, that is given $R,S$ binary relation we say that $R$ is included in $S$ if
+
+\[xRy \Rightarrow xSy,\]
+
+or equivalently $R\subseteq S$.
+
+\begin{proposition}
+    Every binary relation $R$ has a transitive closure $T(R)$.
+
+    \begin{proof}
+        The binary relation $S=X\times X$ is transitive and contains $R$. Furthermore, the transitivity of a binary relation is closed under intersection. Indeed, if $V,W$ are transitive binary relations then $U=V\cap W$ is transitive: if $xUy,yUz$ then $xVy,yVz$ and the same thing for $W$, then by transitivity of $V,W$ we have $xUz$ and $xVz$, that is $xUz$. 
+    \end{proof}
+\end{proposition}
+
+We define the extension of a binary relation.
+
+\begin{definition}
+    Let $R$ be a binary relation on $X$ non-empty. An extension $R^{\ast}$ of $R$ is a binary relation that contains $R$ and preserves the properties of $R$.  
+\end{definition}
+
+We now arrive at the fundamental result used in the jungle policies section.
+
+\begin{theorem*}
+    Let $X$ non-empty and $R$ irreflexive, transitive, and antisymmetric binary relation, then there exists a complete extension of $R$.
+\end{theorem*}
+
+Before proving the theorem we clarify an unproved result that we will use, the Hausdorff Maximum principle. Let us assume the Axiom of Choice.
+
+\begin{axiom}
+    Let $\mathcal{A}$ be an arbitrary collection of non-empty sets. Then there exists a function $f:\mathcal{A} \rightarrow \cup_{A\in\mathcal{A}}A$ such that
+
+    \[f(A)\in A,\,\forall A\in\mathcal{A}.\]
+\end{axiom}
+
+It can be proven that the axiom of choice is equivalent to the Hausdorff's Maximum principle. A proof of necessity can be found in Rudin \ref{rudin1976principles} (p. 395).
+
+\begin{axiom}
+    % Every set $X$ with an irreflexive, transitive and antisymmetric binary relation admits a maximal subset $Y$ with an irreflexive, transitive and antisymmetric binary relation.
+    There exists an $\supseteq$-maximal loset in every poset.
+\end{axiom}
+
+Maximality is intended as no other subset with such a binary relation contains $Y$ and is in $X$. Thanks to this result we can prove the theorem, assuming the Axiom of Chioce.
+
+\begin{proof}
+    Let $T_X$ be the set of all extensions of $R$. By definition of set inclusion $\supseteq$ then $(T_X,\supseteq)$ is a poset. Let $(A,\supseteq)$ be a maximal loset in $T_X$. 
+    Let us define $R^{\ast}=\cup_{S\in A}S$, that is the union of all binary relations in $A$. Since $A$ is a loset, then union of all its element is its maximal element, therefore $R^{\ast}$ 
+    is an element of $A$, and therefore an extension of $R$. We now show that $R^{\ast}$ is complete. If it wasn't there'd be at least two elements $x,y\in X$ unranked by $R^{\ast}$. 
+    Let us define $R'=T\left(R^{\ast}\cup\{x,y\}\right)$. It is an extension of $R$\footnote{It can be directly proven.} and strictly contains $R^{\ast}$, which contradicts the maximality of $A$.
+\end{proof}
