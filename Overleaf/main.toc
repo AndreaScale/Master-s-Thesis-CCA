@@ -1,15 +1,15 @@
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
 ~\hfill \textbf {Page}\par 
-\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
-\contentsline {section}{\numberline {2}Civilized Jungle}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Comparison between equilibria}{6}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Civilized Jungle with divisible commodities}{8}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Comparison between equilibria}{10}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Civilized Welfare Theorems}{12}{section.4}%
-\contentsline {subsection}{\numberline {4.1}First civilized theorem}{12}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Second civilized theorem}{12}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Jungle policies}{16}{section.5}%
-\contentsline {section}{\numberline {6}Conclusive Remarks}{20}{section.6}%
-\contentsline {section}{References}{21}{section*.2}%
-\contentsline {section}{Appendix}{22}{section*.3}%
+\contentsline {section}{Introduction}{3}{section*.2}%
+\contentsline {section}{\numberline {1}Civilized Jungle}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Comparison between equilibria}{7}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Civilized Jungle with divisible commodities}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Comparison between equilibria}{11}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Civilized Welfare Theorems}{13}{section.3}%
+\contentsline {subsection}{\numberline {3.1}First civilized theorem}{13}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Second civilized theorem}{13}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Jungle policies}{17}{section.4}%
+\contentsline {section}{\numberline {5}Conclusive Remarks}{21}{section.5}%
+\contentsline {section}{References}{22}{section*.3}%
+\contentsline {section}{Appendix}{23}{section*.4}%

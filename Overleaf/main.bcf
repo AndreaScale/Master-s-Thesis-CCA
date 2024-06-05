@@ -2361,8 +2361,8 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">RY</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">P-R</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">P-R</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">RY</bcf:citekey>
     <bcf:citekey order="3" intorder="1">RY</bcf:citekey>
     <bcf:citekey order="4" intorder="1">RY</bcf:citekey>
     <bcf:citekey order="5" intorder="1">P-R</bcf:citekey>
@@ -2378,6 +2378,7 @@
     <bcf:citekey order="15" intorder="1">RY</bcf:citekey>
     <bcf:citekey order="16" intorder="1">RY</bcf:citekey>
     <bcf:citekey order="17" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">rudin1976principles</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
