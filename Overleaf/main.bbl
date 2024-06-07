@@ -296,6 +296,42 @@
       \verb https://books.google.it/books?id=kwqzPAAACAAJ
       \endverb
     \endentry
+    \entry{VARIAN197463}{article}{}
+      \name{author}{1}{}{%
+        {{hash=affde3c8d511e90b7126c60a56e7ab49}{%
+           family={Varian},
+           familyi={V\bibinitperiod},
+           given={Hal\bibnamedelima R},
+           giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{affde3c8d511e90b7126c60a56e7ab49}
+      \strng{fullhash}{affde3c8d511e90b7126c60a56e7ab49}
+      \strng{bibnamehash}{affde3c8d511e90b7126c60a56e7ab49}
+      \strng{authorbibnamehash}{affde3c8d511e90b7126c60a56e7ab49}
+      \strng{authornamehash}{affde3c8d511e90b7126c60a56e7ab49}
+      \strng{authorfullhash}{affde3c8d511e90b7126c60a56e7ab49}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-0531}
+      \field{journaltitle}{Journal of Economic Theory}
+      \field{number}{1}
+      \field{title}{Equity, envy, and efficiency}
+      \field{volume}{9}
+      \field{year}{1974}
+      \field{pages}{63\bibrangedash 91}
+      \range{pages}{29}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0022-0531(74)90075-1
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0022053174900751
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0022053174900751
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

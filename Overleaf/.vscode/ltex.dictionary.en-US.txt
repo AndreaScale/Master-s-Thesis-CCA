@@ -5,3 +5,5 @@ Piccione
 Yildiz
 equilibria
 Collegio
+Allievo
+coercively

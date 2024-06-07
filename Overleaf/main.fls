@@ -114,6 +114,8 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 INPUT c:/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT c:/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/cleveref/cleveref.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/cleveref/cleveref.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/makeidx.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/makeidx.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/faktor/faktor.sty

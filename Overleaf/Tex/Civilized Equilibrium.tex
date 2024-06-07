@@ -1,24 +1,27 @@
 \section{Civilized Jungle}
 
-Rubinstein and Yildiz \cite{RY} present a civilized jungle as a tuple $\langle N,X,(\succeq^i)_{i\in N}, \trianglerighteq, \mathcal{L}\rangle$ where $N$ are the agents, $X$ are the $n$ object, $(\succeq^i)_{i\in N}$ are the preferences of each agents over the objects, $\triangleright$ is a strict and complete ordering over $N$ which represents the power relation between the agents and $\mathcal{L}=\{\geq_{\lambda}\}_{\lambda\in\Lambda}$ is a set of complete and transitive (possibly not antisymmetric) binary relations which stands for different criteria that rank agents. 
+Rubinstein and Yildiz \cite{RY} present a civilized jungle as a tuple $\langle N,X,(\succeq^i)_{i\in N}, \trianglerighteq, \mathcal{L}\rangle$ where $N$ are the agents, $X$ are the $N$ object, $(\succeq^i)_{i\in N}$ are the preferences of each agents over the objects, $\triangleright$ is a strict and complete ordering over $N$ which represents the power relation between the agents and $\mathcal{L}=\{\geq_{\lambda}\}_{\lambda\in\Lambda}$ is a set of complete and transitive (possibly not antisymmetric) binary relations which stand for different criteria that rank agents. 
 
-A distribution of the resources over the agents is represented by an assignment $\textbf{x}$ that is a map that maps every agent to an object, that is $\textbf{x}:N\rightarrow X:i\mapsto x^i$. We will use the notation $\textbf{x}=(x^1,\dots,x^2)$. How do we define an equilibrium? Given an assignment, every agent has to be the strongest among those who envy her and can justify themself. How can someone justify herself among a group of agents? We say that agent $i\in N$ is justified by $\geq_{\lambda}$ over $I\subseteq N$ if $i\geq_{\lambda} j\,\forall j\in N$, then:
+Since commodities are indivisible, a distribution of the resources over the agents is represented by an assignment $\textbf{x}$ that is a map that maps every agent to an object, that is $\textbf{x}:N\rightarrow X:i\mapsto x^i$. We will use the notation $\textbf{x}=(x^1,\dots,x^2)$. How do we define an equilibrium? The basic, yet exhaustively informative idea is that Given an assignment, every agent has to be the strongest among those who envy her and can justify themselves. How can someone justify herself among a group of agents? We say that agent $i\in N$ is justified by $\geq_{\lambda}$ over $I\subseteq N$ if $i\geq_{\lambda} j\,\forall j\in I$, then:
+
 \begin{center}
 $i$ is justified among $I$ if $\exists\lambda\in\Lambda$ such that she is justified by that criteria over $I$.
 \end{center}
 
-That is, if you are the best in a group for at least one criteria then you are justified in that group. The justification proposed by R-Y is exclusively meritocratic, and therefore far from reality. Nevertheless, that is the concept of a \textit{civilized} jungle. 
-Let $J_{\mathcal{L}}(I)$ be the set of justifiable agents in $I$. Formally, $J_{\mathcal{L}}:\mathcal{P}(N)\rightarrow\mathcal{P}(N)$ such that:
+That is, if you are the best in a group for at least one criterion then you are justified in that group. We want to highlight that the justification concept is exclusively meritocratic, and therefore far from reality. Nevertheless, this is what we mean by bringing \textit{civilization} into the jungle. 
+Notationally, we define $J_{\mathcal{L}}(I)$ to be the set of justifiable agents in $I$. Rigorously, let $\tilde{J}_{\mathcal{L}}:\mathcal{P}(N)\rightarrow\mathcal{P}(N)$ such that
 
-\[\Tilde{J_{\mathcal{L}}}(I)=\left\{i\in N\,|\, \exists\lambda\in\Lambda\text{ s.t. }i>^{\lambda}j\,\forall j\in I\right\}\]
+\[\Tilde{J_{\mathcal{L}}}(I)=\left\{i\in N\,|\, \exists\lambda\in\Lambda\text{ s.t. }i>^{\lambda}j\,\forall j\in I\right\},\]
 
-Actually, the definition of justified agents in a group is given by:
+then the definition of justified agents in a group is given by
 
-\[J_{\mathcal{L}}(I)=\Tilde{J_{\mathcal{L}}}(I)\cap I\]
+\begin{equation}\label{eqn: J_L}
+    J_{\mathcal{L}}(I)=\Tilde{J_{\mathcal{L}}}(I)\cap I.
+\end{equation}
 
-We restrain the justification only to those who are in the group because we will use this notion just for those who envy or dream about someone, as we will see. Therefore those who are not envious are not interested in being justified. 
+We restrain the justification only to those who are in the group since we will use this notion just for those who envy or dream about someone, as we will see. Thus, those who are not envious are not interested in being justified. 
 
-The last core concept is \textit{envy}. Trivially, an agent $i$ envies another agent $j$ if $x^j\succeq^ix^i$. We define $E(\textbf{x},i)$ as the set of agents that envies $i$, given the assignment $\textbf{x}$. 
+The last core concept, as mentioned, is \textit{envy}. Trivially, an agent $i$ envies another agent $j$ if $x^j\succeq^ix^i$. Here the idea is clear, if I like better your commodity than mine, I envy you. We define $E(\textbf{x},i)$ as the set of agents that envies $i$, given the assignment $\textbf{x}$. 
 
 We are now able to define the equilibrium concept in a civilized jungle.
 
@@ -27,22 +30,26 @@ We are now able to define the equilibrium concept in a civilized jungle.
     \[i\triangleright j \quad \forall j\in J_{\mathcal{L}}(E(\textbf{x},i)) \]
 \end{definition}
 
-A civilized equilibrium is also called a C equilibrium. The existence of such an equilibrium will be discussed in different instances, and it will help us understand how civilization embroils jungle's nature. An interesting kind of language are those that partition agents into two indifferent sets, for each criterion. Such languages are called dichotomous languages.
+A civilized equilibrium requires an assignment to have a fundamental feature; it must be the case that each agent is justified among those who envy her, if not he couldn't even fight for her good, since civilization would prevent her to do so. Only after, when the civilization barrier is overcome, she must be the strongest among those who want, and are entitled, to fight her.  
+
+A civilized equilibrium is also called a C equilibrium. The existence of such an equilibrium will be discussed in different instances, and it will help us understand how civilization embroils jungle's nature. Interesting languages are those that partition agents into two indifferent sets, for each criterion. Such languages are called dichotomous languages.
 %  Such an equilibrium always exists, although it is not very interesting being just a serial dictatorship according to the power relation. We are referring to the simplest equilibrium  
 
 \begin{definition}\label{def: dichotomous language}
-    A language $\mathcal{L}$ is dichotomous if for each criterion $\lambda\in\Lambda$ there exist $i,j\in N$ such that $x>_{\lambda}y$ and $\forall k\in N$ either $k=_{\lambda}i$ or $k=_{\lambda}j$.
+    A language $\mathcal{L}$ is dichotomous if for each criterion $\lambda\in\Lambda$ there exist $i,j\in N$ such that $i>_{\lambda}j$ and $\forall k\in N$ either $k=_{\lambda}i$ or $k=_{\lambda}j$.
 \end{definition}
 
 Given a dichotomous language $\mathcal{L}$ we can therefore partition $N$ by $\sim_{\lambda}$ for all $\lambda\in\Lambda$, where:
 
-\[x\sim_{\lambda} y \Leftrightarrow x=_{\lambda}y\]
+\begin{equation}\label{eqn: def sim}
+    i\sim_{\lambda} j \Leftrightarrow i=_{\lambda}j.
+\end{equation}
 
-And get $N/\sim_{\lambda}=\{0,1\}$. Another handy way of representing a dichotomous language is to define a set of properties $\phi^i$ for each agent $i\in N$. These sets are defined to be the collection of criteria with respect to which the agent is in the upper equivalence class. In economic terms, a dichotomous language provides a distinction into strong and weak agents for each criterion. 
+By doing so we get $N/\sim_{\lambda}=\{0,1\}$. Another handy way of representing a dichotomous language is to define a set of properties $\phi^i$ for each agent $i\in N$. These sets are defined to be the collection of criteria with respect to which the agent is in the upper equivalence class defined by \cref{eqn: def sim}. In economic terms, a dichotomous language provides a distinction into strong and weak agents for each criterion. 
 
 
 \begin{example}[Collegio Carlo Alberto]\label{Example: CCA}
-    Let the Collegio Carlo Alberto be a Jungle, civilized. The agents are all the Professors and the Allievi. The commodities are the different speeds at which an agent can be served at a buffet in the common room. Of course, everyone has the same preference relation: before is better. We summarize by letting $N$ finite, $X\subset\mathbb{N}$ finite, where each number corresponds to a different speed and $k\succeq^i j$ if and only if $k\leq j$, where $\leq$ is the usual ordering over the natural numbers for all $i\in N$. We assume that there is a power relation $\trianglerighteq$ over $N$ defined by each agent's capability of winning a buffet race. Nevertheless, one can exercise her power only if she is justified by the one criterion that governs the Collegio: being a scholar. Formally, $\Lambda=\{\lambda\}$ is a singleton and $x>_{\lambda}y$ if and only if $x$ is a Professor and $y$ an Allievo. The only civilized equilibrium is straightforward: the serial dictatorships over the two equivalence classes induced by $\sim_{\lambda}$. Therefore, the fastest and mostly skilled Professor will eat instantly and all the others will follow, based on the power criteria that govern their world. Only after, when so-called civilization has played its role, will the Allievi fight for the remaining food, based on the power relation that reigns among them. 
+    Let the Collegio Carlo Alberto be a Jungle, civilized. The agents are the Professors and the Allievi. The commodities are different quality of wines at a buffet in the common room: there is only one glass for each quality ranging from a "Barbaresco di Gaja" all the way to a bottle of wine in carton of a discount. Of course, everyone has the same preference relation: better quality is better. We assume that there the power relation is defined by each agent's capability of winning a buffet race. Nevertheless, one can exercise her power only if she is justified by the one criterion that governs the Collegio: being a scholar. Does this setting admit a C equilibrium? We formalize by letting $N$ finite, $X$ finite of same cardinality of $N$, where each number corresponds to a different wine and $x\succeq^i y$ if and only if $x\geq y$, where $\leq$ is the usual ordering over the natural numbers for all $i\in N$. We define the power relation $\triangleright$ and the language $\Lambda=\{\lambda\}$ is a singleton and $i>_{\lambda}j$ if and only if $i$ is a Professor and $j$ an Allievo. The only civilized equilibrium is straightforward: the serial dictatorships over the two equivalence classes induced by $\sim_{\lambda}$. Therefore, the fastest and mostly skilled Professor will drink the Gaja, and all the others will follow, based on the power criteria that govern their world. Only after, when so-called civilization has played its role, will the Allievi fight for the remaining glasses, based on the power relation that reigns among them. 
 
     % In general, if $\mathcal{L}$ is a singleton whose element is not a strict ordering,    as before, one can define the C equilibrium running serial dictatorships over all the equivalence classes induced by $\sim$.
 \end{example}
@@ -63,18 +70,20 @@ And get $N/\sim_{\lambda}=\{0,1\}$. Another handy way of representing a dichotom
 
 \color{black}{A language truly brings civilization to a jungle if it has more than one criterion.}\color{black}{} In fact as \cite[RY]{RY} show, if $\mathcal{L}$ consists of just one strict ordering $\geq$, then the unique "civilized" equilibrium is a serial dictatorship according to $\geq$. Then the C equilibrium does not depend on the power relation over the agents\color{black}{ and the civilized jungle is just a normal jungle with another power relation.}  \color{black} 
 
+This example highlights a technique that can be used in different instances when searching for a civilized equilibrium. Indeed, it is used to prove the following result.
+
 \begin{proposition}\label{prop: strict ordering}
     If $\mathcal{L}$ consists of just one strict ordering $\geq$, then the unique civilized equilibrium is a serial dictatorship according to $\geq$.
     \begin{proof}
-        It is an equilibrium since the strongest with respect to $\geq$ he's going to be the only one justified among those who dream about him. We rule him out. Proceeding iteratively we get the thesis. This argument almost shows uniqueness of the equilibrium. Let us consider another equilibrium. In this equilibrium there must be some agent $j$ dreaming about $i$ and being stronger, civilization wise, that him and weaker to no one in the set of those who dream about $i$. If so, he would be the only one justified, absurd.
+        It is an equilibrium since the strongest with respect to $\geq$ is going to be the only one justified among those who envy about her. We rule her out. Proceeding iteratively we get the equilibrium definition. This argument almost shows uniqueness of the equilibrium. Let us consider another equilibrium. In this equilibrium there must be some agent $j$ dreaming about $i$ and being stronger, civilization wise, than her and weaker to no one in the set of those who dream about $i$. If so, she would be the only one justified, absurd.
     \end{proof}
 \end{proposition}
 
-The reasoning used in Proposition \ref{prop: strict ordering} allows us to state also the following property, whose proof is immediate and left to the reader.
+The reasoning used in Proposition \ref{prop: strict ordering} allows us to state also the following property.
 
-\begin{corollary}
+\begin{proposition}\label{prop: L singleton}
     If $\mathcal{L}$ is a singleton then the serial dictatorships over all the equivalence classes induced by equivalent power is a C equilibrium.  
-\end{corollary}
+\end{proposition}
 
 We can think of an uncivilized jungle. Piccione and Rubinstein \cite[PR]{P-R} defined the concept of jungle, as a civilized jungle without a language and a related equilibrium.
 
@@ -95,6 +104,8 @@ Therefore, the unique jungle equilibrium is obtained through a serial dictatorsh
         Where $\max_{\succeq^j}Y$ stands for maximize $Y$ with respect to the preference relation $\succeq^j$. We assume that $N$ is ordered following $\trianglerighteq$, if not, a permutation suffices to extend the definition. This is a jungle equilibrium. Let $y$ 
     \end{proof}
 \end{proposition}
+
+Historically, the Jungle (\cite[PR]{P-R} (2007)) was introduced before the civilized jungle (\cite[RY]{RY} (2022)). We presented the latter first both because it is our main object of interested in this dissertation, and also because this very paper was written for indivisible commodities, while the former has divisible goods. Indeed, we will heavily take inspiration on the paper by Piccione and Rubinstein while allowing the civilized jungle for divisible commodities. 
 
 \subsection{Comparison between equilibria}
 
@@ -117,7 +128,7 @@ Weak convexity is an extension of the basic notion of convexity. It was proposed
     Let $\langle N,X,(\succeq^i)_{i\in N}, \trianglerighteq, \mathcal{L}\rangle$ be a civilized jungle with a weakly $\mathcal{L}$-concave power relation, then the jungle equilibrium is a civilized equilibrium.
 
     \begin{proof}
-        Let $\textbf{x}$ be the jungle equlibrium. Of course in a serial dictatorship $E(\textbf{x},i)\subseteq\{j\,|\,i\triangleright j\}$, then $i$ is the strongest among $J_{\mathcal{L}}(E(\textbf{x},i))$ if $i$ belongs to it. In fact, recall that justified agents in a group are part of that group. If by contradiction $i$ is not the strongest in $J_{\mathcal{L}}(E(\textbf{x},i))$ then $i\notin J_{\mathcal{L}}(E(\textbf{x},i))$, but then $\forall\lambda\in\Lambda$ there exists $i_{\lambda}\neq i$ such that $i_{\lambda}\geq_{\lambda}i$ but also $i\triangleright i_{\lambda}$, and so by weak concavity $i\triangleright i$.   
+        Let $\textbf{x}$ be the jungle equilibrium. Of course in a serial dictatorship $E(\textbf{x},i)\subseteq\{j\,|\,i\triangleright j\}$, then $i$ is the strongest among $J_{\mathcal{L}}(E(\textbf{x},i))$ if $i$ belongs to it. In fact, recall that justified agents in a group are part of that group \cref{eqn: J_L}. If by contradiction $i\notin J_{\mathcal{L}}(E(\textbf{x},i))$, then $\forall\lambda\in\Lambda$ there exists $i_{\lambda}\neq i$ such that $i_{\lambda}\geq_{\lambda}i$ but also $i\triangleright i_{\lambda}$, and so by weak concavity $i\triangleright i$.   
     \end{proof}
 \end{proposition}
 
@@ -134,7 +145,9 @@ Furthermore, if the notion of concavity is empowered the jungle equilibrium beco
     \[\exists i_{\lambda}\in N\setminus\{j\}\text{ s.t. }i_{\lambda}\geq_{\lambda}j\text{ and }i\trianglerighteq i_{\lambda}\Rightarrow i\triangleright j\]
 \end{definition}
 
-\begin{proposition}
+While weak $\mathcal{L}$-concavity asks the agents to be strongly separated by the power relation ($i\triangleright i_{\lambda}$), strong $\mathcal{L}$-concavity delivers $i\triangleright j$ even if $i=_{\lambda} i_{\lambda}$.
+
+\begin{proposition}\label{Prop: undivisible, strictly concave L}
     Let $\langle N,X,(\succeq^i)_{i\in N}, \trianglerighteq, \mathcal{L}\rangle$ be a civilized jungle of strict orderings criteria with a strongly $\mathcal{L}$-concave power relation, then the jungle equilibrium is the unique civilized equilibrium.
 
     \begin{proof}
@@ -157,11 +170,11 @@ Furthermore, if the notion of concavity is empowered the jungle equilibrium beco
 
 \section{Civilized Jungle with divisible commodities}
 % 
-I now extend the setting of a civilized jungle and the relative equilibrium concept for divisible commodities. Relying on the paper by Piccione and Rubinstein \cite[PR]{P-R} I define for each agent $i\in N$ a consumption set $X^i\subseteq\mathbb{R}_+^K$ and $X=(X^1,\dots,X^N)$. I also have to specify an aggregate bundle $w=(w_1,\dots,w_K)$, where $w_k\in\mathbb{R}_+\,\forall k$. Therefore a \textbf{civilized jungle} is a tuple:
+We now extend the setting of a civilized jungle and the relative equilibrium concept for divisible commodities. Relying on the paper by Piccione and Rubinstein \cite[PR]{P-R} we define an economy with $K$ commodities with an aggregate bundle $w=(w_1,\dots,w_K)$, where $w_k\in\mathbb{R}_+\,\forall k\in K$. Each agent $i\in N$ has a consumption set $X^i\subseteq\mathbb{R}_+^K$ and $X=(X^1,\dots,X^N)$. Therefore, a \textbf{civilized jungle} is a tuple:
 
-\[\langle N,K,(X^i)_{i\in N}, w, (\succeq^i)_{i\in N}, \trianglerighteq, \mathcal{L}\rangle\]
+\[\langle N,K,(X^i)_{i\in N}, w, (\succeq^i)_{i\in N}, \trianglerighteq, \mathcal{L}\rangle.\]
 
-Because agents can consume more than just one commodity in different quantities, economic scenarios cannot be represented by an assignment, instead they are modeled through allocations. An allocation is a vector $\textbf{z}\in \mathbb{R}_+^K\times X$, where the first coordinate stands for the unused goods, therefore $\sum_{i=0}^Nz_i=w$. I now adapt the civilized equilibrium concept by redefining the notion of "envy". In this context, agent are not envious, because their economic situation can be, and realistically is always, composed of divisible commodities. Given an allocation, an agent can "dream" about another agent if she sees in the dreamed one's property a more preferred allocation. We enrich the envious relationship as agents have more complex behaviors in this setting. For instance, a monkey can dream about another primate not because she has a certain variety of bananas, but because she has a certain quantity of a certain type of bananas. This situation requires a broader concept of envy, as the different good is not its only driver. To keep it simpler, we do not allow coercion on multiple agents. I define formally the concept of a dreamer.
+Because agents can consume more than just one commodity in different quantities, economic scenarios cannot be represented by an assignment, instead they are modeled through allocations. An allocation is a vector $\textbf{z}\in \mathbb{R}_+^K\times X$, where the first coordinate stands for the unused goods while the following for each good. Therefore, $\sum_{i=0}^Nz_i=w$. We now want to adapt the civilized equilibrium concept by redefining the notion of "envy". In this context, agent are not envious, because their economic situation can be, and realistically is always, composed of divisible commodities. Given an allocation, an agent can "dream" about another agent if she sees in the dreamed one's property a more preferred allocation. We enrich the envious relationship as agents have more complex behaviors in this setting. For instance, a monkey can dream about another primate not because she has a certain variety of bananas, but because she has a certain quantity of a certain type of bananas. This situation requires a broader concept of envy, as the difference in goods is not its only driver. To keep it simpler, we do not allow coercion on multiple agents. I define formally the concept of a dreamer.
 
 \begin{definition}
     Given an allocation $\textbf{z}$ and $i,j\in N$ we say that $i$ \textbf{dreams} about $j$ if:
@@ -169,7 +182,7 @@ Because agents can consume more than just one commodity in different quantities,
 \[\exists y^i\in X^i \text{ such that } y^i\succeq^iz^i \text{ and } y^i\leq z^i+z^j\]
 \end{definition}
 
-Why do we ask for this broader notion instead of envy? This necessity comes from the larger set of economic situations arising from goods' divisibility. If commodities are indivisible agents' preferences must rank them in function of their unitary value; there is no difference between 2 bananas and 1 stick, you either prefer the banana or the stick. If commodities are divisible quantity plays a fundamental role, it may be the case that you prefer one stick more than one banana and prefer two bananas over one stick. This wider range of possibilities suggests the necessity of enlarging the notion of envy. An agent can build a more preferred allocation by taking a part of another agent's property instead of switching the whole allocation. Since we allow for this instance to take place we named it as \textit{dreaming} about another agent and define the notion of equilibrium not allowing for them to happen.
+If commodities are indivisible agents' preferences must rank them in function of their unitary value; there is no difference between 2 bananas and 1 stick, you either prefer the banana or the stick. If commodities are divisible quantities play a fundamental role, it may be the case that you prefer one stick more than one banana and prefer two bananas over one stick. This wider range of possibilities suggests the necessity of enlarging the notion of envy. An agent can build a more preferred allocation by taking a part of another agent's property instead of switching the whole allocation. Since we allow for this instance to take place we named it as \textit{dreaming} about another agent.
 
 We define the new set of those who dream about someone in a given allocation:
 
@@ -193,7 +206,7 @@ We can reformulate the definition \ref{def1} as follows, in terms of dreamers.
     
 \end{definition}
 
-In a jungle equilibrium, every agent has to be the strongest among all those who dream of her. In a \textit{civilized} jungle, agents have to justify themselves through at least one criterion to "fight" for commodities. Once agents are justified, jungle law prevails.
+In a jungle equilibrium, every agent has to be the strongest among those who dream of her. As before, civilization imposes a friction between dreaming about someone and coercively taking some of her properties. In a \textit{civilized} jungle, agents have to justify themselves through at least one criterion to "fight" for commodities. Once agents are justified, jungle law prevails.
 
 \begin{definition}\label{Cequilibrium}
     An allocation $\textbf{z}$ is a \textbf{civilized equilibrium} if $\forall i\in N$ the following hold:
@@ -204,7 +217,7 @@ In a jungle equilibrium, every agent has to be the strongest among all those who
     \end{enumerate}
 \end{definition}
 
-The first two conditions were previously explained. The third one assures that the unused goods aren't useful for anyone, if they were the agents would take them. We will also call it \textit{C equilibrium}. We now present some examples that help to give a better understanding of this setting and concept.
+The first two conditions were previously explained. The third one assures that the unused goods aren't useful for anyone, as if they were, monkeys would take them. We now present some examples that will help to give a better understanding of this setting.
 
 %It can be restated as:
 
@@ -213,22 +226,22 @@ The first two conditions were previously explained. The third one assures that t
 %I point out this less concise definition in order to highlight that agents can dream about exploiting unused goods in equilibrium, but they are not justified in doing so.
 
 
-It is clear the further step required by civilization: in equilibrium, agents have to be the strongest among the justified dreamers, not just among those who dream. We recall that agents justified among a group are defined to be part of that group. The definition could be also given without this condition, letting agents be justified in groups of which they are not part, but it seems unreasonable in our setting, given that only dreamers are interested in being justified.
+Before doing so we point out once again the further step required by civilization: in equilibrium, agents have to be the strongest among the justified dreamers, not just among those who dream. We recall that agents justified among a group are defined to be part of that group. The definition could be also given without this condition, letting agents to be justified in groups of which they are not part, but it seems unreasonable in our setting, given that only dreamers are interested in being justified.
 
 \begin{example}[Uncivilized languages]
-    Not all languages provide actual civilization. Let us consider a singleton language $\mathcal{L}=\{\lambda\}$, how is it going to affect the economy? Let us consider an allocation $z$ and look at the C equilibrium definition \ref{Cequilibrium}. For every agent $i$, the set of justified dreamers has to be a singleton ${\mathcal{L}}(D(z,i)=\{j\}$ where $j>k$ for every $k\in D(z,i)$. If we want $z$ to be a C equilibrium then $i\triangleright j$. Therefore the unique C equilibrium in this economy is the serial dictatorship according to the language. We call such a language an \textit{uncivilized} language, since it just changes the power relation, without introducing any friction between dreams and power. What if the language takes the opposite form? Let us consider a language $\mathcal{L}=\mathcal{S}_N$, that is the set of all permutation over agents.  Under this language, every agent is going to be justified in every subset since there will always be a criterion with respect to which it is the strongest. Because of this, the language does not change anything on the equilibrium side, its presence is neutral and agents are going to construct equilibria thinking about being justified and the economy falls back into a standard Jungle.
+    Not all languages provide actual civilization. Let us consider a singleton language $\mathcal{L}=\{\lambda\}$, how is it going to affect the economy? Let us consider an allocation $z$ and look at the C equilibrium definition \ref{Cequilibrium}. For every agent $i$, the set of justified dreamers has to be a singleton ${\mathcal{L}}(D(z,i)=\{j\}$ where $j>k$ for every $k\in D(z,i)$. If we want $z$ to be a C equilibrium then $i\triangleright j$. Therefore the unique C equilibrium in this economy is the serial dictatorship according to the language. We call such a language an \textit{uncivilized} language, since it just changes the power relation, without introducing any friction between dreams and power. This result perfectly mimics \cref{prop: L singleton} What if the language takes the opposite form? Let us consider a language $\mathcal{L}=\mathcal{S}_N$, that is the set of all permutation over agents.  Under this language, every agent is going to be justified in every subset since there will always be a criterion with respect to which she is the strongest. Because of this, the language does not change anything on the equilibrium side, its presence is neutral and agents are going to construct equilibria thinking about being justified and the economy falls back into a standard Jungle.
 
     These two examples show that real civilization has to come at a price, they have to be exclusionary to provide useful justifying criteria.
 \end{example}
 
-Rubinstein and Yildiz define the "I am how I am" criterion as dichotomous language $\mathcal{L}=\{m_i:\,i=1,\dots,N\}$ where $\{m_i\}$ defines agent $i$ as strictly stronger than the others, who are equally strong. This language provides the same result as $\mathcal{S}_N$. 
+Rubinstein and Yildiz define the "I am how I am" criterion as dichotomous language $\mathcal{L}=\{m_i:\,i=1,\dots,N\}$ where $\{m_i\}$ defines agent $i$ as strictly stronger than the others, who are equally strong. This language provides the same result as $\mathcal{S}_N$. Indeed, what implies neutrality of a language is the justification of every agent in every group, which is attained by the "I am who I am" language.
 
 \begin{example}[Strictly monotonic preferences]
-    If we deal with strictly monotone preferences there is a unique C equilibrium. It will be the allocation that gives the whole endowment to the strongest ($\triangleright$) among those justified by the language within the set of all agents. That is, $\mathcal{L}=\{\lambda_{\lambda},\,\lambda\in\Lambda\}$ selects $\leq n$ agents who are the strongest for a criterium, formally $J_{\mathcal{L}}(N)=\{j:\exists \lambda\in\Lambda\,j>^{\lambda}k\,\forall k\in N\}$. Among those, the strongest with respect to the power relation $\triangleright$ is the one who'll get $w$. That is gonna be the only C equilibrium. Indeed, if $z$ is a C equilibrium then for every agent $i$ who's got positive consumption is going to have everyone dreaming about him, therefore
+    If we deal with strictly monotone preferences there is a unique C equilibrium. It will be the allocation that gives the whole endowment to the strongest ($\triangleright$) among those justified by the language within the set of all agents. That is, $\mathcal{L}=\{\lambda_{\lambda},\,\lambda\in\Lambda\}$ selects $m\leq n$ agents who are the strongest for a criterium, formally $J_{\mathcal{L}}(N)=\{j:\exists \lambda\in\Lambda\,j>^{\lambda}k\,\forall k\in N\}$. Among those, the strongest with respect to the power relation $\triangleright$ is the one who'll get $w$. That will be the only C equilibrium. Indeed, if $z$ is a C equilibrium then every agent $i$ who has got positive consumption will have everyone dreaming about him, therefore
     
     \[J_{\mathcal{L}}(D(z,i))=J_{\mathcal{L}}(N)=\{j:\exists \lambda\in\Lambda\,j>^{\lambda}k\,\forall k\in N\},\]
 
-    but $i\triangleright j$ for every $j\in J_{\mathcal{L}}(N)$, which implies that the only agent who can have positive consumption is the strongest among $J_{\mathcal{L}}(N)$. Since he is the only one, he is going to consume the whole aggregate endowment.
+    but $i\triangleright j$ for every $j\in J_{\mathcal{L}}(N)$, which implies that the only agent who can have positive consumption is the strongest among $J_{\mathcal{L}}(N)$. Since he is the only one, he is going to consume the whole aggregate endowment. Clearly, if her consumption set does not allow for the whole endowment to be consumed, then what is left goes to the second strongest by the same reasoning. We apply iteratively the reasoning until everything is consumed or every has fully satisfied her consumption set.    
 \end{example}
 
 The last example we want to show is proposed by Rubinstein and Yildiz in \cite[RY]{RY}, and it combines multiple dichotomous languages in a nested organization.
@@ -239,7 +252,7 @@ The last example we want to show is proposed by Rubinstein and Yildiz in \cite[R
 
 \subsection{Comparison between equilibria}
 
-What is the relation between a civilized and an uncivilized equilibrium? Does their relation for indivisible commodities still hold?
+What is the relation between a civilized and an uncivilized equilibrium? Does their relation for indivisible commodities still hold? Yes it does, but we lose uniqueness.
 
 \begin{proposition}\label{Prop: jungle eq is C in weakly concave}
 In a weakly concave jungle, a jungle equilibrium is civilized.
@@ -249,4 +262,4 @@ In a weakly concave jungle, a jungle equilibrium is civilized.
     \end{proof}
 \end{proposition}
 
-Of course, in this setting uniqueness under strict concavity does not hold. The proof by R-Y\cite{RY} breaks instantly when the existence of another C equilibrium implies that there is at least one powerful envious, meaning that she is stronger than the envied one. It is not true when goods are more than just units, possibly there are multiple best bundles for each agent.
+Of course, in this setting uniqueness under strict concavity does not hold. The proof of \cref{Prop: undivisible, strictly concave L} by R-Y\cite{RY} breaks instantly when the existence of another C equilibrium implies that there is at least one powerful envious, meaning that she is stronger than the envied one. It is not true when goods are more than just units, possibly there are multiple best bundles for each agent.

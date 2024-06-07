@@ -3,7 +3,7 @@
 ~\hfill \textbf {Page}\par 
 \contentsline {section}{Introduction}{3}{section*.2}%
 \contentsline {section}{\numberline {1}Civilized Jungle}{5}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Comparison between equilibria}{7}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.1}Comparison between equilibria}{8}{subsection.1.1}%
 \contentsline {section}{\numberline {2}Civilized Jungle with divisible commodities}{9}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Comparison between equilibria}{11}{subsection.2.1}%
 \contentsline {section}{\numberline {3}Civilized Welfare Theorems}{13}{section.3}%

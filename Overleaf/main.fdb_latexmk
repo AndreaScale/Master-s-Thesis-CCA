@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1717583467 "main.bcf" "main.bbl" "main" 1717583480 0
-  "./biblio.bib" 1717510548 4685 664c01114c253cadf8d7a7d1549a974a ""
-  "main.bcf" 1717583479 108774 211261eb78d9f8ea7d96615266f52e6a "pdflatex"
+["biber main"] 1717752793 "main.bcf" "main.bbl" "main" 1717754176 0
+  "./biblio.bib" 1717752774 5024 62ba96afa62cd3ff6c62908d3a2c14a7 ""
+  "main.bcf" 1717754175 108958 60c3c4fe3e39dd0168eca1acef729435 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1717583475 "c:/Users/ASUS/Desktop/CCA/Tesi/Overleaf/main.tex" "main.pdf" "main" 1717583480 0
+["pdflatex"] 1717754170 "c:/Users/ASUS/Desktop/CCA/Tesi/Overleaf/main.tex" "main.pdf" "main" 1717754176 0
   "Tex/Appendix.tex" 1717583472 4475 79022324c48096fe32a7a87d0b921e0a ""
-  "Tex/Civilized Equilibrium.tex" 1717583391 25786 60ec530eb480d1991c7011c08f837668 ""
-  "Tex/Jungle Policies.tex" 1717512125 18201 aedfb2e822f6224b5bd5377808643b19 ""
-  "Tex/Welafare Theorems.tex" 1717521135 12785 6234507bc4f19185bd89db7ecd45285b ""
-  "c:/Users/ASUS/Desktop/CCA/Tesi/Overleaf/main.tex" 1717583275 11235 f034a998283b35cd4b747692889d28f1 ""
+  "Tex/Civilized Equilibrium.tex" 1717751166 28100 8fb7007ba5348b702dab7e9d93820a6e ""
+  "Tex/Jungle Policies.tex" 1717754097 17942 d6fe9ef8984794fd41c9429594cb033a ""
+  "Tex/Welafare Theorems.tex" 1717752930 12876 9e07168ee27376c58685382ef18f4de2 ""
+  "c:/Users/ASUS/Desktop/CCA/Tesi/Overleaf/main.tex" 1717754169 11629 49af9c7444882bdd44e7dd91b8643b10 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1702045797 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1702046692 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1702046295 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -279,6 +279,7 @@
   "c:/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx" 1702045429 39965 48ce9ce3350aba9457f1020b1deba5cf ""
   "c:/texlive/2023/texmf-dist/tex/latex/caption/caption.sty" 1702045628 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "c:/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty" 1702045628 72619 ee90b6612147680fd73c3b1406a74245 ""
+  "c:/texlive/2023/texmf-dist/tex/latex/cleveref/cleveref.sty" 1702045774 329481 7fc6b003158402a4c694bc0a1b729308 ""
   "c:/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.cfg" 1702046002 7068 06f8d141725d114847527a66439066b6 ""
   "c:/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.def" 1702046002 21994 2bc2a882df92d97dbce35c06bb1d3541 ""
   "c:/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.sty" 1702046002 62761 3c92d495a9e03d7254b9a3266aa17164 ""
@@ -369,12 +370,12 @@
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1702050522 8213459 d852d7229c91739ec72879a46b89d1d8 ""
   "c:/texlive/2023/texmf.cnf" 1702050383 713 e69b156964470283e0530f5060668171 ""
   "cca.png" 1717515332 99957 db9d30ebc6a4119defe318ff10a05317 ""
-  "main.aux" 1717583479 4129 fa9a8c0733bc5b5b7a9191317d911b2a "pdflatex"
-  "main.bbl" 1717583470 13665 84824a66b2ffc4f543ea49cfc5da3d07 "biber main"
-  "main.out" 1717583479 1894 96734c6ce92ba0461275301a702b9d03 "pdflatex"
-  "main.run.xml" 1717583479 2301 fc418833f88d2cf4592b65b247893834 "pdflatex"
-  "main.tex" 1717583275 11235 f034a998283b35cd4b747692889d28f1 ""
-  "main.toc" 1717583479 1019 2c4a4664091b9898fbe7b5ecb8e4a1ae "pdflatex"
+  "main.aux" 1717754175 5914 df44a7705dd753730f54eb9b2ad6e143 "pdflatex"
+  "main.bbl" 1717752796 15126 5fe9fecccac0abb7c47bf95c513c5ff9 "biber main"
+  "main.out" 1717754175 1894 96734c6ce92ba0461275301a702b9d03 "pdflatex"
+  "main.run.xml" 1717754175 2301 fc418833f88d2cf4592b65b247893834 "pdflatex"
+  "main.tex" 1717754169 11629 49af9c7444882bdd44e7dd91b8643b10 ""
+  "main.toc" 1717754175 1019 b5bec9ffa4befd886663296b8baecfd5 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"
