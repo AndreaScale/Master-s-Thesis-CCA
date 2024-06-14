@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.8)  7 JUN 2024 11:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.8)  9 JUN 2024 18:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1588,14 +1588,7 @@ File: uesint.fd
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
- [2] [3] [4] (./Tex/Civilized Equilibrium.tex [5] [6] [7] [8] [9] [10{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-
-LaTeX Warning: Reference ` strictly concave L' on page 1 undefined on input line 265.
-
-
-LaTeX Warning: Reference `Prop: undivisible' on page 1 undefined on input line 265.
-
-) [11] [12] (./Tex/Welafare Theorems.tex [13]
+ [2] [3] [4] (./Tex/Civilized Equilibrium.tex [5] [6] [7] [8] [9] [10{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [11] [12] (./Tex/Welafare Theorems.tex [13]
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/fgerm/m/n/10'
 (microtype)             (new value: 10.0pt) on input line 53.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/fgerm/m/n/7'
@@ -1618,25 +1611,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Overfull \hbox (42.28958pt too wide) in paragraph at lines 257--257
-[]\OT1/cmr/m/n/12 (-20) Daron Ace-moglu. \  In-tro-duc-tion to Mod-ern Eco-nomic Growth". In: 122247000000001721
- []
-
-
-Overfull \hbox (42.19447pt too wide) in paragraph at lines 257--257
-\OT1/cmr/m/n/12 (-20) (Nov. 2007). \OT1/cmr/m/sc/12/100ls (-20) url\OT1/cmr/m/n/12 (-20) : [][]$\OT1/cmtt/m/n/12 https : / / ideas . repec . org / p / cla / levrem / 122247000000001721 .
- []
-
-[22] (./Tex/Appendix.tex [23]) [24] (./main.aux)
+ [22] (./Tex/Appendix.tex [23]) [24] (./main.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 96734C6CE92BA0461275301A702B9D03;1894.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1644,18 +1623,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 59512 strings out of 474267
- 1381936 string characters out of 5751465
- 2318753 words of memory out of 5000000
- 80479 multiletter control sequences out of 15000+600000
- 591469 words of font info for 273 fonts, out of 8000000 for 9000
+ 59490 strings out of 474267
+ 1381143 string characters out of 5751465
+ 2318641 words of memory out of 5000000
+ 80462 multiletter control sequences out of 15000+600000
+ 591403 words of font info for 272 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,9n,107p,2076b,1972s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/mathabx-type1/matha12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/mathabx-type1/mathb12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/mathabx-type1/mathb8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on main.pdf (24 pages, 431704 bytes).
+Output written on main.pdf (24 pages, 430187 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 364 compressed objects within 4 object streams
- 97 named destinations out of 1000 (max. 500000)
+ 443 PDF objects out of 1000 (max. 8388607)
+ 357 compressed objects within 4 object streams
+ 93 named destinations out of 1000 (max. 500000)
  49778 words of extra memory for PDF output out of 51595 (max. 10000000)
 
