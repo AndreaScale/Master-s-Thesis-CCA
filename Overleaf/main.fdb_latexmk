@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1717947400 "main.bcf" "main.bbl" "main" 1717952179 0
+["biber main"] 1717947400 "main.bcf" "main.bbl" "main" 1720125112 0
   "./biblio.bib" 1717752774 5024 62ba96afa62cd3ff6c62908d3a2c14a7 ""
-  "main.bcf" 1717952177 108890 789804605ba442cf11760892c98eaa81 "pdflatex"
+  "main.bcf" 1720125111 108890 789804605ba442cf11760892c98eaa81 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1717952168 "c:/Users/ASUS/Desktop/CCA/Tesi/Overleaf/main.tex" "main.pdf" "main" 1717952179 0
+["pdflatex"] 1720125107 "c:/Users/ASUS/Desktop/CCA/Tesi/Overleaf/main.tex" "main.pdf" "main" 1720125112 0
   "Tex/Appendix.tex" 1717946753 4475 79022324c48096fe32a7a87d0b921e0a ""
-  "Tex/Civilized Equilibrium.tex" 1717946694 28129 eab51168964614d478494ba143ca2a4d ""
+  "Tex/Civilized Equilibrium.tex" 1720124940 29322 6ebca0874715cadcd0afc2754269a0c0 ""
   "Tex/Jungle Policies.tex" 1717754097 17942 d6fe9ef8984794fd41c9429594cb033a ""
-  "Tex/Welafare Theorems.tex" 1717752930 12876 9e07168ee27376c58685382ef18f4de2 ""
-  "c:/Users/ASUS/Desktop/CCA/Tesi/Overleaf/main.tex" 1717947391 11632 35edf936f968b07b07adda0f751e76d6 ""
+  "Tex/Welafare Theorems.tex" 1720125105 12872 95bd5d6c3e42f32c3c523dc80e2babe3 ""
+  "c:/Users/ASUS/Desktop/CCA/Tesi/Overleaf/main.tex" 1720124698 12157 e8ab7644af44292e850cbb8cf3c9b878 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1702045797 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1702046692 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1702046295 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -370,12 +370,12 @@
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1702050522 8213459 d852d7229c91739ec72879a46b89d1d8 ""
   "c:/texlive/2023/texmf.cnf" 1702050383 713 e69b156964470283e0530f5060668171 ""
   "cca.png" 1717515332 99957 db9d30ebc6a4119defe318ff10a05317 ""
-  "main.aux" 1717952177 5603 8dd6b19cbf6e983382f6d40fa24ee7ec "pdflatex"
+  "main.aux" 1720125111 5603 443a3f504f92ca77e8085bd2928630e7 "pdflatex"
   "main.bbl" 1717947403 9132 948b2ec8318cb3a851b4b490ae9233b4 "biber main"
-  "main.out" 1717952177 1894 96734c6ce92ba0461275301a702b9d03 "pdflatex"
-  "main.run.xml" 1717952177 2301 fc418833f88d2cf4592b65b247893834 "pdflatex"
-  "main.tex" 1717947391 11632 35edf936f968b07b07adda0f751e76d6 ""
-  "main.toc" 1717952177 1019 b5bec9ffa4befd886663296b8baecfd5 "pdflatex"
+  "main.out" 1720125111 1894 96734c6ce92ba0461275301a702b9d03 "pdflatex"
+  "main.run.xml" 1720125111 2301 fc418833f88d2cf4592b65b247893834 "pdflatex"
+  "main.tex" 1720124698 12157 e8ab7644af44292e850cbb8cf3c9b878 ""
+  "main.toc" 1720125111 1019 b5bec9ffa4befd886663296b8baecfd5 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"
